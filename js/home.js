@@ -1,89 +1,60 @@
 /**
  * SavorSpot — Home Page (index.html) Script
  * Handles:
- *  1. Dynamic rendering & category filtering of Chef's Signature Dishes
- *  2. Slide-over Dining Bag / Cart Drawer synced with localStorage ("savorCart")
- *  3. Responsive mobile navigation drawer & header scroll state
- *  4. Toast notifications & placeholder group page feedback
+ *  1. Shared localStorage cart state ("savorCart") & Evening Menu Highlights Add-to-Bag
+ *  2. Live #navCartCount badge & slide-over #savorCart drawer with +/- qty & PKR 4,500 delivery progress
+ *  3. Responsive mobile navigation drawer, desktop "More" dropdown, & sticky header scroll state
+ *  4. Toast notifications & cross-tab storage synchronization
  */
 
 (() => {
   "use strict";
 
   const CART_STORAGE_KEY = "savorCart";
-  const FREE_DELIVERY_THRESHOLD = 6000;
+  const FREE_DELIVERY_THRESHOLD = 4500;
 
-  /** @type {Array<{id: string, name: string, category: string, badge: string, description: string, price: number}>} */
-  const FEATURED_DISHES = [
-    {
-      id: "wagyu-truffle-tartare",
-      name: "Hand-Cut Wagyu & Black Truffle Tartare",
-      category: "Artisanal Starters",
-      badge: "Chef's Opening",
-      description:
-        "Dry-aged tenderloin diced to order, shaved Périgord truffle, cured egg yolk emulsion, caper berries, and toasted brioche soldiers.",
-      price: 3450
-    },
-    {
-      id: "saffron-lobster-veloute",
-      name: "Roasted Lobster & Gilgit Saffron Velouté",
-      category: "Artisanal Starters",
-      badge: "Seasonal Reserve",
-      description:
-        "Slow-simmered shellfish bisque infused with northern saffron threads, charred fennel oil, and blistered sourdough crisp.",
-      price: 2950
-    },
+  /** Signature dishes featured in the Evening Menu Highlights section */
+  const SIGNATURE_DISHES = [
     {
       id: "salt-range-lamb-rack",
-      name: "Wood-Fired Rack of Salt Range Lamb",
-      category: "Wood-Fired Mains",
-      badge: "House Signature",
-      description:
-        "Herb-crusted prime rack seared over aged olive wood, paired with black garlic pomme purée, confit shallots, and rosemary jus.",
-      price: 6400
+      name: "Wood-Fired Salt Range Lamb Rack",
+      category: "Wood-Fired Main",
+      price: 6400,
+      image: "images/dish-lamb-rack.jpg"
     },
     {
       id: "espresso-duck-magret",
       name: "Espresso-Glazed Duck Magret",
-      category: "Wood-Fired Mains",
-      badge: "Guest Favorite",
-      description:
-        "Crisp-skinned duck breast lacquered in roasted Arabica reduction, spiced fig compote, and braised celeriac fondant.",
-      price: 5650
-    },
-    {
-      id: "cedar-miso-black-cod",
-      name: "Charred Cedar & Miso Black Cod",
-      category: "Coastal Reserve",
-      badge: "Limited Catch",
-      description:
-        "Caramelized sablefish fillet over charred leek fondue, pickled sea fennel, crispy shallots, and warm citrus beurre blanc.",
-      price: 5900
+      category: "House Signature",
+      price: 5200,
+      image: "images/dish-duck-magret.jpg"
     },
     {
       id: "valrhona-espresso-torte",
-      name: "70% Valrhona & Roasted Hazelnut Torte",
-      category: "Patisserie",
-      badge: "Pastry Finale",
-      description:
-        "Warm dark chocolate ganache, caramelized Piedmont hazelnut praline, single-origin espresso gelato, and delicate gold leaf.",
-      price: 2150
+      name: "70% Valrhona & Hazelnut Torte",
+      category: "Patisserie Finale",
+      price: 2150,
+      image: "images/dish-valrhona-torte.jpg"
     }
   ];
 
   // Cached DOM References
   const siteHeader = document.getElementById("site-header");
-  const dishesGrid = document.getElementById("featured-dishes-grid");
-  const filterButtons = document.querySelectorAll(".filter-pill");
+  const eveningDishesGrid = document.getElementById("evening-dishes-grid");
+
+  const navMoreToggle = document.getElementById("nav-more-toggle");
+  const navMoreMenu = document.getElementById("nav-more-menu");
 
   const cartToggleBtn = document.getElementById("cart-toggle-btn");
   const cartCloseBtn = document.getElementById("cart-close-btn");
-  const cartDrawer = document.getElementById("cart-drawer");
+  const cartDrawer = document.getElementById("savorCart");
   const cartBackdrop = document.getElementById("cart-backdrop");
   const cartItemsContainer = document.getElementById("cart-items-container");
-  const cartCountBadge = document.getElementById("cart-count");
+  const cartCountBadge = document.getElementById("navCartCount");
   const cartSubtotalEl = document.getElementById("cart-subtotal");
+  const cartDeliveryBox = document.getElementById("cart-delivery-box");
   const cartDeliveryNote = document.getElementById("cart-delivery-note");
+  const cartDeliveryProgress = document.getElementById("cart-delivery-progress");
   const cartCheckoutBtn = document.getElementById("cart-checkout-btn");
   const cartClearBtn = document.getElementById("cart-clear-btn");
 
@@ -94,8 +65,6 @@
 
   const toastContainer = document.getElementById("toast-container");
   const footerYear = document.getElementById("footer-year");
-
-  let activeCategory = "all";
 
   /* ------------------------------------------------------------------------
      Utilities
@@ -145,7 +114,7 @@
   }
 
   function addToCart(dishId) {
-    const dish = FEATURED_DISHES.find((entry) => entry.id === dishId);
+    const dish = SIGNATURE_DISHES.find((entry) => entry.id === dishId);
     if (!dish) return;
 
     const cart = readCart();
@@ -159,6 +128,7 @@
         name: dish.name,
         category: dish.category,
         price: dish.price,
+        image: dish.image,
         quantity: 1
       });
     }
@@ -210,7 +180,6 @@
   function bumpCartBadge() {
     if (!cartCountBadge) return;
     cartCountBadge.classList.remove("is-bumped");
-    // Trigger reflow to restart CSS scale pulse
     void cartCountBadge.offsetWidth;
     cartCountBadge.classList.add("is-bumped");
     window.setTimeout(() => {
@@ -219,51 +188,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Render Signature Dishes
-     ------------------------------------------------------------------------ */
-  function renderDishes(category = "all") {
-    if (!dishesGrid) return;
-
-    const filtered =
-      category === "all"
-        ? FEATURED_DISHES
-        : FEATURED_DISHES.filter((dish) => dish.category === category);
-
-    if (filtered.length === 0) {
-      dishesGrid.innerHTML = `<p class="noscript-note">No signature dishes found in this selection.</p>`;
-      return;
-    }
-
-    dishesGrid.innerHTML = filtered
-      .map(
-        (dish) => `
-        <article class="dish-card" data-dish-id="${escapeHTML(dish.id)}">
-          <div class="dish-card-top">
-            <span class="dish-category">${escapeHTML(dish.category)}</span>
-            <span class="dish-badge">${escapeHTML(dish.badge)}</span>
-          </div>
-          <h3 class="dish-name">${escapeHTML(dish.name)}</h3>
-          <p class="dish-desc">${escapeHTML(dish.description)}</p>
-          <div class="dish-card-footer">
-            <div class="dish-price-group">
-              <span class="dish-price-label">Chef's Plate</span>
-              <span class="dish-price">${formatPKR(dish.price)}</span>
-            </div>
-            <button type="button" class="add-bag-btn" data-add-id="${escapeHTML(dish.id)}">
-              <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M10 4v12M4 10h12" stroke-linecap="round"/>
-              </svg>
-              Add to Bag
-            </button>
-          </div>
-        </article>
-      `
-      )
-      .join("");
-  }
-
-  /* ------------------------------------------------------------------------
-     Render Cart Drawer
+     Render Cart Drawer (#savorCart) & Delivery Progress
      ------------------------------------------------------------------------ */
   function renderCart() {
     const cart = readCart();
@@ -281,19 +206,22 @@
       cartSubtotalEl.textContent = formatPKR(subtotal);
     }
 
-    if (cartDeliveryNote) {
+    if (cartDeliveryBox && cartDeliveryNote && cartDeliveryProgress) {
+      const progressPct = Math.min(100, Math.round((subtotal / FREE_DELIVERY_THRESHOLD) * 100));
+      cartDeliveryProgress.style.width = `${progressPct}%`;
+
       if (subtotal >= FREE_DELIVERY_THRESHOLD) {
         cartDeliveryNote.textContent =
           "Complimentary insulated Islamabad delivery unlocked for this order.";
-        cartDeliveryNote.classList.add("is-unlocked");
+        cartDeliveryBox.classList.add("is-unlocked");
       } else if (subtotal > 0) {
         const remaining = FREE_DELIVERY_THRESHOLD - subtotal;
-        cartDeliveryNote.textContent = `Add ${formatPKR(remaining)} more for complimentary insulated Islamabad delivery.`;
-        cartDeliveryNote.classList.remove("is-unlocked");
+        cartDeliveryNote.textContent = `Add ${formatPKR(remaining)} more for complimentary Islamabad delivery (PKR 4,500+).`;
+        cartDeliveryBox.classList.remove("is-unlocked");
       } else {
         cartDeliveryNote.textContent =
-          "Complimentary insulated dispatch across Islamabad on orders above PKR 6,000.";
-        cartDeliveryNote.classList.remove("is-unlocked");
+          "Complimentary insulated dispatch in Islamabad on orders of PKR 4,500+.";
+        cartDeliveryBox.classList.remove("is-unlocked");
       }
     }
 
@@ -309,8 +237,8 @@
             </svg>
           </div>
           <h3>Your bag is awaiting selection</h3>
-          <p>Choose from Chef Tariq's signature plates or explore the complete seasonal menu.</p>
-          <a class="btn btn-secondary" href="pages/menu.html">Browse Full Menu</a>
+          <p>Choose from our Evening Menu Highlights or explore the complete seasonal menu.</p>
+          <a class="btn btn-secondary" href="pages/menu.html">Explore Full Menu</a>
         </div>
       `;
       return;
@@ -344,10 +272,17 @@
   }
 
   /* ------------------------------------------------------------------------
-     Drawer & Mobile Menu Controls
+     Drawer, Dropdown & Mobile Menu Controls
      ------------------------------------------------------------------------ */
+  function closeMoreDropdown() {
+    if (!navMoreToggle || !navMoreMenu) return;
+    navMoreToggle.setAttribute("aria-expanded", "false");
+    navMoreMenu.hidden = true;
+  }
+
   function openCartDrawer() {
     if (!cartDrawer || !cartBackdrop) return;
+    closeMoreDropdown();
     closeMobileMenu(false);
     cartBackdrop.hidden = false;
     cartDrawer.hidden = false;
@@ -373,6 +308,7 @@
 
   function openMobileMenu() {
     if (!mobileNavDrawer || !mobileNavBackdrop) return;
+    closeMoreDropdown();
     closeCartDrawer(false);
     mobileNavBackdrop.hidden = false;
     mobileNavDrawer.hidden = false;
@@ -428,7 +364,6 @@
      Event Listeners
      ------------------------------------------------------------------------ */
   function bindEvents() {
-    // Sticky header scroll shadow
     window.addEventListener(
       "scroll",
       () => {
@@ -438,26 +373,25 @@
       { passive: true }
     );
 
-    // Filter pills
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const selected = btn.dataset.category || "all";
-        if (selected === activeCategory) return;
-        activeCategory = selected;
-
-        filterButtons.forEach((pill) => {
-          const isMatch = pill === btn;
-          pill.classList.toggle("is-active", isMatch);
-          pill.setAttribute("aria-selected", String(isMatch));
-        });
-
-        renderDishes(activeCategory);
+    // Desktop "More" dropdown toggle
+    if (navMoreToggle && navMoreMenu) {
+      navMoreToggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const isOpen = navMoreToggle.getAttribute("aria-expanded") === "true";
+        navMoreToggle.setAttribute("aria-expanded", String(!isOpen));
+        navMoreMenu.hidden = isOpen;
       });
-    });
 
-    // Add to Bag delegation on signature grid
-    if (dishesGrid) {
-      dishesGrid.addEventListener("click", (event) => {
+      document.addEventListener("click", (event) => {
+        if (!navMoreMenu.hidden && !event.target.closest(".nav-dropdown")) {
+          closeMoreDropdown();
+        }
+      });
+    }
+
+    // Add to Bag delegation on Evening Menu Highlights grid
+    if (eveningDishesGrid) {
+      eveningDishesGrid.addEventListener("click", (event) => {
         const btn = event.target.closest("[data-add-id]");
         if (!btn) return;
         addToCart(btn.dataset.addId);
@@ -499,16 +433,10 @@
       cartCheckoutBtn.addEventListener("click", () => {
         const cart = readCart();
         if (cart.length === 0) {
-          showToast("Add at least one signature dish before checking out.", "info");
+          showToast("Add at least one signature dish before proceeding to checkout.", "info");
           return;
         }
-        const subtotal = cart.reduce(
-          (sum, item) => sum + Number(item.price) * Number(item.quantity),
-          0
-        );
-        showToast(
-          `Order draft saved (${formatPKR(subtotal)}). Continue to Menu or Deals to finalize.`
-        );
+        window.location.href = "pages/checkout.html";
       });
     }
 
@@ -530,7 +458,6 @@
       mobileNavBackdrop.addEventListener("click", () => closeMobileMenu(true));
     }
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll(".mobile-nav-link").forEach((link) => {
       link.addEventListener("click", () => closeMobileMenu(false));
     });
@@ -538,11 +465,12 @@
     // Global Escape key handler
     document.addEventListener("keydown", (event) => {
       if (event.key !== "Escape") return;
+      closeMoreDropdown();
       if (cartDrawer && !cartDrawer.hidden) closeCartDrawer(true);
       if (mobileNavDrawer && !mobileNavDrawer.hidden) closeMobileMenu(true);
     });
 
-    // Keep cart synced across open tabs/pages
+    // Sync bag across tabs/pages
     window.addEventListener("storage", (event) => {
       if (event.key === CART_STORAGE_KEY) {
         renderCart();
@@ -557,7 +485,6 @@
     if (footerYear) {
       footerYear.textContent = String(new Date().getFullYear());
     }
-    renderDishes("all");
     renderCart();
     bindEvents();
   }
