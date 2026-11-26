@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="24-Hour Wagyu Nihari">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2a1d15"/>
+      <stop offset="60%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </radialGradient>
+    <radialGradient id="plate" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#1e1815"/>
+      <stop offset="85%" stop-color="#0f0c0a"/>
+      <stop offset="100%" stop-color="#080605"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e7c68e"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9e7b1e"/>
+    </linearGradient>
+    <radialGradient id="jus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6b3416"/>
+      <stop offset="70%" stop-color="#3b1b0b"/>
+      <stop offset="100%" stop-color="#1e0e06"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="300" r="225" fill="none" stroke="url(#gold)" stroke-opacity="0.28" stroke-width="1.5"/>
+  <circle cx="400" cy="300" r="205" fill="url(#plate)" stroke="#2c221c" stroke-width="2"/>
+  <ellipse cx="400" cy="308" rx="138" ry="118" fill="url(#jus)" opacity="0.92"/>
+  <path d="M325 292 C335 245, 455 235, 472 288 C485 330, 445 375, 385 372 C335 370, 315 332, 325 292 Z" fill="#4f2612" stroke="#7d4424" stroke-width="2"/>
+  <path d="M352 278 C375 260, 428 262, 446 290 C432 308, 378 312, 352 278 Z" fill="#7a3e1c" opacity="0.8"/>
+  <path d="M385 268 L398 258 L408 272 L392 278 Z" fill="url(#gold)"/>
+  <path d="M358 320 Q400 342 442 316" fill="none" stroke="#e7c68e" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="345" cy="260" r="3" fill="#d4af37"/>
+  <circle cx="458" cy="338" r="2.5" fill="#e7c68e"/>
+  <text x="400" y="545" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">SIGNATURE PLATE • WAGYU NIHARI</text>
+</svg>

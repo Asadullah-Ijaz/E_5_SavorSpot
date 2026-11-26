@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Himalayan Herb Lamb Rack">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#281d17"/>
+      <stop offset="65%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e7c68e"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="175" y="135" width="450" height="320" rx="28" fill="#15100d" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M255 340 Q400 280 545 348" fill="none" stroke="#5b2232" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+  <g transform="translate(295, 225)">
+    <rect x="20" y="70" width="170" height="68" rx="22" fill="#4b2c1d" stroke="#7d4a30" stroke-width="2"/>
+    <path d="M50 72 L38 15 M90 70 L82 12 M130 70 L128 12 M170 72 L174 16" stroke="#e8dccb" stroke-width="8" stroke-linecap="round"/>
+    <path d="M35 88 C65 78, 145 78, 175 88" stroke="#526a3b" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9"/>
+  </g>
+  <circle cx="515" cy="300" r="24" fill="#2d241e" stroke="#625245" stroke-width="1.5"/>
+  <circle cx="495" cy="272" r="4" fill="#9e2a3b"/>
+  <circle cx="536" cy="276" r="3.5" fill="#9e2a3b"/>
+  <text x="400" y="545" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">WOOD-FIRED • HIMALAYAN LAMB RACK</text>
+</svg>

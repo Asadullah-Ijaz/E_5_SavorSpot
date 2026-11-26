@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Pistachio and Kashmiri Saffron Tart">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="62%">
+      <stop offset="0%" stop-color="#282016"/>
+      <stop offset="65%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </radialGradient>
+    <radialGradient id="saffron" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#f0c766"/>
+      <stop offset="100%" stop-color="#c48a20"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="300" r="195" fill="#17120f" stroke="#d4af37" stroke-opacity="0.35" stroke-width="1.5"/>
+  <circle cx="400" cy="300" r="118" fill="#8b5a2b" stroke="#b57d45" stroke-width="4"/>
+  <circle cx="400" cy="300" r="98" fill="url(#saffron)"/>
+  <circle cx="378" cy="285" r="26" fill="#5e7d42" opacity="0.88"/>
+  <circle cx="426" cy="316" r="20" fill="#4f2233" opacity="0.9"/>
+  <path d="M350 250 Q400 215 455 262" fill="none" stroke="#f7dfb0" stroke-width="2" opacity="0.85"/>
+  <text x="400" y="545" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">PATISSERIE • PISTACHIO SAFFRON TART</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Margalla Twilight Terrace">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#17121b"/>
+      <stop offset="55%" stop-color="#1d1512"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </linearGradient>
+    <radialGradient id="lantern" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e7c68e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e7c68e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <path d="M0 320 Q180 245 340 295 T650 265 L800 300 L800 420 L0 420 Z" fill="#130f0d"/>
+  <line x1="0" y1="390" x2="800" y2="390" stroke="#d4af37" stroke-opacity="0.3" stroke-width="2"/>
+  <circle cx="220" cy="180" r="65" fill="url(#lantern)"/>
+  <rect x="206" y="155" width="28" height="44" rx="4" fill="#211812" stroke="#d4af37" stroke-width="2"/>
+  <circle cx="580" cy="180" r="65" fill="url(#lantern)"/>
+  <rect x="566" y="155" width="28" height="44" rx="4" fill="#211812" stroke="#d4af37" stroke-width="2"/>
+  <rect x="275" y="408" width="250" height="14" rx="4" fill="#241b15" stroke="#d4af37" stroke-opacity="0.4"/>
+  <rect x="392" y="382" width="16" height="26" fill="#d4af37" opacity="0.8"/>
+  <text x="400" y="548" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">AMBIANCE • MARGALLA TERRACE</text>
+</svg>

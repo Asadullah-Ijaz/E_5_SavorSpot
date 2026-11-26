@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Explore SavorSpot's Culinary & Ambiance Gallery in F-6 Markaz, Islamabad — signature plates, candlelit dining rooms, artisan elixirs, and patisserie."
+  />
+  <title>Culinary &amp; Ambiance Gallery | SavorSpot — F-6 Markaz, Islamabad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/gallery.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to gallery content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SavorSpot Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">
+          <span class="brand-name">SavorSpot</span>
+          <span class="brand-loc">F-6 Markaz, Islamabad</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="deals.html" class="nav-link">Deals</a></li>
+          <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+          <li><a href="gallery.html" class="nav-link is-active" aria-current="page">Gallery</a></li>
+          <li><a href="chefs-reviews.html" class="nav-link">Chef's &amp; Reviews</a></li>
+          <li><a href="catering.html" class="nav-link">Catering</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-trigger"
+          id="cartTrigger"
+          aria-controls="savorCart"
+          aria-expanded="false"
+          aria-label="Open order cart"
+        >
+          <svg class="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <path d="M6 6L5 3H2" />
+            <circle cx="9.5" cy="19.5" r="1.25" />
+            <circle cx="17.5" cy="19.5" r="1.25" />
+          </svg>
+          <span class="cart-label">Order</span>
+          <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="gallery-hero" aria-labelledby="galleryHeroTitle">
+      <div class="container hero-content">
+        <p class="eyebrow">Obsidian &amp; Espresso Visual Journal</p>
+        <h1 id="galleryHeroTitle">Culinary &amp; Ambiance Gallery</h1>
+        <p class="hero-subtitle">
+          Step inside our candlelit dining room in F-6 Markaz, Islamabad. Browse slow-braised
+          signature plates, smoked botanical elixirs, patisserie creations, and evening spaces.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="galleryFilterHeading">
+      <div class="container">
+        <div class="gallery-toolbar">
+          <h2 id="galleryFilterHeading" class="sr-only">Filter gallery by category</h2>
+
+          <div class="filter-tabs" role="tablist" aria-label="Gallery categories">
+            <button
+              type="button"
+              class="filter-tab is-active"
+              role="tab"
+              aria-selected="true"
+              data-category="all"
+            >
+              All <span class="tab-count" data-count-for="all">8</span>
+            </button>
+            <button
+              type="button"
+              class="filter-tab"
+              role="tab"
+              aria-selected="false"
+              data-category="signature-plates"
+            >
+              Signature Plates <span class="tab-count" data-count-for="signature-plates">2</span>
+            </button>
+            <button
+              type="button"
+              class="filter-tab"
+              role="tab"
+              aria-selected="false"
+              data-category="dining-ambiance"
+            >
+              Dining Ambiance <span class="tab-count" data-count-for="dining-ambiance">2</span>
+            </button>
+            <button
+              type="button"
+              class="filter-tab"
+              role="tab"
+              aria-selected="false"
+              data-category="bar-beverages"
+            >
+              Bar &amp; Beverages <span class="tab-count" data-count-for="bar-beverages">2</span>
+            </button>
+            <button
+              type="button"
+              class="filter-tab"
+              role="tab"
+              aria-selected="false"
+              data-category="desserts"
+            >
+              Desserts <span class="tab-count" data-count-for="desserts">2</span>
+            </button>
+          </div>
+
+          <p class="gallery-status" id="galleryStatus" aria-live="polite">
+            Showing 8 curated moments
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <article
+            class="gallery-card"
+            data-id="wagyu-nihari"
+            data-category="signature-plates"
+            data-category-label="Signature Plates"
+            data-title="24-Hour Wagyu Nihari"
+            data-caption="Slow-braised Wagyu shank finished with Kashmiri saffron bone marrow glaze, crisp shallots, and 24k gold leaf."
+            data-meta="Chef's Tasting Course • PKR 6,400"
+            data-price="6400"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview 24-Hour Wagyu Nihari"
+              >
+                <img
+                  src="../assets/images/gallery/wagyu-nihari.svg"
+                  alt="24-Hour Wagyu Nihari plated on matte black slate with saffron marrow glaze and gold leaf"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Signature Plates</span>
+                  <span class="card-price">PKR 6,400</span>
+                </div>
+                <h3 class="card-title">24-Hour Wagyu Nihari</h3>
+                <p class="card-caption">
+                  Slow-braised Wagyu shank finished with Kashmiri saffron bone marrow glaze and crisp shallots.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="charcoal-lamb-rack"
+            data-category="signature-plates"
+            data-category-label="Signature Plates"
+            data-title="Himalayan Herb Lamb Rack"
+            data-caption="Charcoal-seared lamb rack crusted with wild mountain thyme, smoked eggplant puree, and pomegranate reduction."
+            data-meta="Wood-Fired Grill • PKR 5,850"
+            data-price="5850"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Himalayan Herb Lamb Rack"
+              >
+                <img
+                  src="../assets/images/gallery/charcoal-lamb-rack.svg"
+                  alt="Charcoal-seared herb-crusted lamb rack with smoked eggplant puree on obsidian ceramic"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Signature Plates</span>
+                  <span class="card-price">PKR 5,850</span>
+                </div>
+                <h3 class="card-title">Himalayan Herb Lamb Rack</h3>
+                <p class="card-caption">
+                  Charcoal-seared lamb rack with wild mountain thyme, smoked eggplant puree, and pomegranate glaze.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="obsidian-main-hall"
+            data-category="dining-ambiance"
+            data-category-label="Dining Ambiance"
+            data-title="The Obsidian Dining Hall"
+            data-caption="Hand-oiled espresso walnut paneling, brushed brass chandeliers, and intimate velvet banquettes in F-6 Markaz."
+            data-meta="Main Floor • 48 Seated Covers"
+            data-orderable="false"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview The Obsidian Dining Hall"
+              >
+                <img
+                  src="../assets/images/gallery/obsidian-main-hall.svg"
+                  alt="SavorSpot main dining hall with dark espresso wood paneling, brass chandeliers, and candlelit tables"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Dining Ambiance</span>
+                  <span class="card-price">48 Covers</span>
+                </div>
+                <h3 class="card-title">The Obsidian Dining Hall</h3>
+                <p class="card-caption">
+                  Espresso walnut paneling, warm brass chandeliers, and candlelit velvet banquettes.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <a href="reservations.html" class="btn-gold">Reserve Table</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="rooftop-terrace"
+            data-category="dining-ambiance"
+            data-category-label="Dining Ambiance"
+            data-title="Margalla Twilight Terrace"
+            data-caption="Open-air evening seating framed by amber lanterns, dark teak lounges, and cool Margalla foothills breeze."
+            data-meta="Upper Deck • Dusk to Midnight"
+            data-orderable="false"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Margalla Twilight Terrace"
+              >
+                <img
+                  src="../assets/images/gallery/rooftop-terrace.svg"
+                  alt="Intimate rooftop terrace dining at twilight with warm amber lanterns and dark wood accents"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Dining Ambiance</span>
+                  <span class="card-price">Upper Deck</span>
+                </div>
+                <h3 class="card-title">Margalla Twilight Terrace</h3>
+                <p class="card-caption">
+                  Open-air evening seating lit by amber lanterns overlooking the quiet canopy of F-6.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <a href="reservations.html" class="btn-gold">Reserve Table</a>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="saffron-espresso-elixir"
+            data-category="bar-beverages"
+            data-category-label="Bar & Beverages"
+            data-title="Smoked Saffron Espresso Elixir"
+            data-caption="Single-origin roasted espresso infused with Kashmiri saffron syrup, toasted oak smoke, and orange oil."
+            data-meta="Artisan Zero-Proof Bar • PKR 1,450"
+            data-price="1450"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Smoked Saffron Espresso Elixir"
+              >
+                <img
+                  src="../assets/images/gallery/saffron-espresso-elixir.svg"
+                  alt="Smoked saffron and espresso craft elixir in a cut crystal glass on dark marble"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Bar &amp; Beverages</span>
+                  <span class="card-price">PKR 1,450</span>
+                </div>
+                <h3 class="card-title">Smoked Saffron Espresso Elixir</h3>
+                <p class="card-caption">
+                  Single-origin espresso infused with Kashmiri saffron, toasted oak smoke, and expressed orange oil.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="cardamom-rose-spritz"
+            data-category="bar-beverages"
+            data-category-label="Bar & Beverages"
+            data-title="Cardamom &amp; Damascus Rose Spritz"
+            data-caption="Crushed green cardamom, distilled Damascus rosewater, sparkling botanical tonic, and dried rose petals."
+            data-meta="Botanical Lounge • PKR 1,250"
+            data-price="1250"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Cardamom and Damascus Rose Spritz"
+              >
+                <img
+                  src="../assets/images/gallery/cardamom-rose-spritz.svg"
+                  alt="Cardamom and Damascus rose botanical spritz in a tall fluted crystal glass with brass stirrer"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Bar &amp; Beverages</span>
+                  <span class="card-price">PKR 1,250</span>
+                </div>
+                <h3 class="card-title">Cardamom &amp; Damascus Rose Spritz</h3>
+                <p class="card-caption">
+                  Crushed green cardamom, distilled Damascus rosewater, and crisp botanical tonic.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="espresso-gold-millefeuille"
+            data-category="desserts"
+            data-category-label="Desserts"
+            data-title="Espresso &amp; 70% Cacao Mille-Feuille"
+            data-caption="Caramelized puff pastry layered with dark cacao ganache, roasted espresso cremeux, hazelnut praline, and gold leaf."
+            data-meta="Patisserie Finale • PKR 1,950"
+            data-price="1950"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Espresso and 70% Cacao Mille-Feuille"
+              >
+                <img
+                  src="../assets/images/gallery/espresso-gold-millefeuille.svg"
+                  alt="Dark chocolate and roasted espresso mille-feuille with gold leaf on black stoneware"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Desserts</span>
+                  <span class="card-price">PKR 1,950</span>
+                </div>
+                <h3 class="card-title">Espresso &amp; 70% Cacao Mille-Feuille</h3>
+                <p class="card-caption">
+                  Caramelized pastry layered with dark cacao ganache, espresso cremeux, and hazelnut praline.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article
+            class="gallery-card"
+            data-id="pistachio-saffron-tart"
+            data-category="desserts"
+            data-category-label="Desserts"
+            data-title="Pistachio &amp; Kashmiri Saffron Tart"
+            data-caption="Roasted Iranian pistachio frangipane, chilled saffron kulfi custard, charred black fig, and spun amber sugar."
+            data-meta="Patisserie Finale • PKR 1,750"
+            data-price="1750"
+            data-orderable="true"
+          >
+            <figure class="card-figure">
+              <button
+                type="button"
+                class="card-media-btn"
+                aria-label="Preview Pistachio and Kashmiri Saffron Tart"
+              >
+                <img
+                  src="../assets/images/gallery/pistachio-saffron-tart.svg"
+                  alt="Pistachio and Kashmiri saffron tart with caramelized fig and spun sugar on espresso plate"
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <span class="card-zoom-hint" aria-hidden="true">View Detail</span>
+              </button>
+              <figcaption class="card-body">
+                <div class="card-meta-row">
+                  <span class="card-tag">Desserts</span>
+                  <span class="card-price">PKR 1,750</span>
+                </div>
+                <h3 class="card-title">Pistachio &amp; Kashmiri Saffron Tart</h3>
+                <p class="card-caption">
+                  Roasted pistachio frangipane, saffron kulfi custard, charred fig, and spun amber sugar.
+                </p>
+                <div class="card-actions">
+                  <button type="button" class="btn-outline btn-preview">Inspect</button>
+                  <button type="button" class="btn-gold btn-add-cart">Add to Order</button>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-text">
+            <span class="brand-name">SavorSpot</span>
+            <span class="brand-loc">F-6 Markaz, Islamabad</span>
+          </span>
+        </a>
+        <p class="footer-copy">
+          Contemporary Pakistani fine dining and artisanal espresso bar crafted in deep obsidian and warm brass.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Curated Deals</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="chefs-reviews.html">Chef's &amp; Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Hospitality</h2>
+        <ul class="footer-links">
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="catering.html">Private Catering</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact &amp; Directions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Hours &amp; Location</h2>
+        <p class="footer-meta">Street 7, F-6 Markaz, Islamabad</p>
+        <p class="footer-meta">Tue – Sun: 1:00 PM – 12:30 AM</p>
+        <p class="footer-meta">Concierge: +92 51 555 0194</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SavorSpot Islamabad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Preview Modal -->
+  <div
+    class="lightbox-backdrop"
+    id="galleryLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightboxTitle"
+    hidden
+  >
+    <div class="lightbox-dialog">
+      <button
+        type="button"
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close gallery preview"
+      >
+        &times;
+      </button>
+
+      <div class="lightbox-stage">
+        <button
+          type="button"
+          class="lightbox-nav lightbox-prev"
+          id="lightboxPrev"
+          aria-label="Previous gallery item"
+        >
+          &#8592;
+        </button>
+
+        <figure class="lightbox-figure">
+          <img id="lightboxImage" src="" alt="" />
+        </figure>
+
+        <button
+          type="button"
+          class="lightbox-nav lightbox-next"
+          id="lightboxNext"
+          aria-label="Next gallery item"
+        >
+          &#8594;
+        </button>
+      </div>
+
+      <div class="lightbox-details">
+        <div class="lightbox-meta-row">
+          <span class="card-tag" id="lightboxCategory"></span>
+          <span class="lightbox-counter" id="lightboxCounter"></span>
+        </div>
+        <h2 class="lightbox-title" id="lightboxTitle"></h2>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+        <p class="lightbox-meta" id="lightboxMeta"></p>
+        <div class="lightbox-actions" id="lightboxActions">
+          <button type="button" class="btn-gold" id="lightboxAddCart" hidden>
+            Add to Order
+          </button>
+          <a href="reservations.html" class="btn-outline" id="lightboxReserveLink" hidden>
+            Reserve This Space
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared SavorCart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+  <aside
+    class="cart-drawer"
+    id="savorCart"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cartDrawerTitle"
+    hidden
+  >
+    <div class="cart-header">
+      <div>
+        <h2 id="cartDrawerTitle">Your SavorSpot Order</h2>
+        <p class="cart-subtitle">F-6 Markaz Kitchen &amp; Espresso Bar</p>
+      </div>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close order drawer">
+        &times;
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">PKR 0</strong>
+      </div>
+      <div class="cart-footer-actions">
+        <button type="button" class="btn-outline" id="cartClearBtn">Clear Order</button>
+        <a href="menu.html" class="btn-gold" id="cartCheckoutBtn">Continue to Menu</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../js/gallery.js" defer></script>
+</body>
+</html>

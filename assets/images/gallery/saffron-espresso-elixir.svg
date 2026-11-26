@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Smoked Saffron Espresso Elixir">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#281c14"/>
+      <stop offset="65%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </radialGradient>
+    <linearGradient id="elixir" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8732a"/>
+      <stop offset="45%" stop-color="#4e230d"/>
+      <stop offset="100%" stop-color="#1d0d06"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="400" cy="455" rx="185" ry="22" fill="#070504" opacity="0.8"/>
+  <path d="M315 215 L485 215 L465 445 L335 445 Z" fill="rgba(255,255,255,0.04)" stroke="#e7c68e" stroke-opacity="0.55" stroke-width="2"/>
+  <path d="M323 285 L477 285 L462 435 L338 435 Z" fill="url(#elixir)"/>
+  <rect x="355" y="298" width="76" height="76" rx="8" transform="rotate(8 393 336)" fill="rgba(255,255,255,0.14)" stroke="rgba(231,198,142,0.3)"/>
+  <path d="M365 185 Q395 145 375 110 M415 190 Q445 145 425 100" fill="none" stroke="#e7c68e" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round"/>
+  <text x="400" y="545" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">ELIXIR BAR • SAFFRON ESPRESSO</text>
+</svg>

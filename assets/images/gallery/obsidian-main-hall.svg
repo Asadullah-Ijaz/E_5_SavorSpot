@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="The Obsidian Dining Hall">
+  <defs>
+    <linearGradient id="hallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#191310"/>
+      <stop offset="60%" stop-color="#100c0a"/>
+      <stop offset="100%" stop-color="#070504"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#e7c68e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#e7c68e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#hallBg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <g stroke="#d4af37" stroke-opacity="0.32" fill="none">
+    <path d="M120 490 L120 190 A80 80 0 0 1 280 190 L280 490"/>
+    <path d="M320 490 L320 175 A80 80 0 0 1 480 175 L480 490"/>
+    <path d="M520 490 L520 190 A80 80 0 0 1 680 190 L680 490"/>
+  </g>
+  <line x1="400" y1="0" x2="400" y2="135" stroke="#d4af37" stroke-width="2"/>
+  <ellipse cx="400" cy="145" rx="75" ry="16" fill="none" stroke="#e7c68e" stroke-width="2.5"/>
+  <circle cx="348" cy="145" r="5" fill="#e7c68e"/>
+  <circle cx="400" cy="155" r="6" fill="#e7c68e"/>
+  <circle cx="452" cy="145" r="5" fill="#e7c68e"/>
+  <rect x="230" y="380" width="340" height="18" rx="6" fill="#231914" stroke="#d4af37" stroke-opacity="0.45"/>
+  <rect x="382" y="398" width="36" height="92" fill="#18120e"/>
+  <rect x="394" y="346" width="12" height="34" fill="#f3e6d3"/>
+  <ellipse cx="400" cy="338" rx="6" ry="10" fill="#e7c68e"/>
+  <text x="400" y="548" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">AMBIANCE • THE OBSIDIAN HALL</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Cardamom and Damascus Rose Spritz">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#2a191b"/>
+      <stop offset="65%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </radialGradient>
+    <linearGradient id="rose" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4727e" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#6b232e" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M340 155 L460 155 L442 365 L358 365 Z" fill="rgba(255,255,255,0.05)" stroke="#e7c68e" stroke-opacity="0.55" stroke-width="2"/>
+  <path d="M346 210 L454 210 L440 358 L360 358 Z" fill="url(#rose)"/>
+  <line x1="400" y1="365" x2="400" y2="450" stroke="#e7c68e" stroke-width="3"/>
+  <ellipse cx="400" cy="454" rx="58" ry="10" fill="none" stroke="#e7c68e" stroke-width="2"/>
+  <line x1="425" y1="120" x2="388" y2="335" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="382" cy="260" r="3" fill="#f6d8dc"/>
+  <circle cx="418" cy="295" r="2.5" fill="#f6d8dc"/>
+  <circle cx="395" cy="235" r="2" fill="#f6d8dc"/>
+  <text x="400" y="545" text-anchor="middle" fill="#e7c68e" font-family="Georgia, serif" font-size="18" letter-spacing="5" opacity="0.85">BOTANICAL LOUNGE • ROSE SPRITZ</text>
+</svg>
