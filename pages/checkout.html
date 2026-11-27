@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete your SavorSpot order from our F-6 Markaz, Islamabad kitchen. Review your cart, choose delivery or pickup, and confirm payment.">
+  <title>Checkout &amp; Order Summary | SavorSpot Islamabad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to checkout content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SavorSpot Home">
+        <span class="brand-crest" aria-hidden="true">S</span>
+        <span class="brand-text">
+          <span class="brand-name">SavorSpot</span>
+          <span class="brand-location">F-6 Markaz · Islamabad</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="deals.html">Deals</a></li>
+          <li><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link is-active" href="checkout.html" aria-current="page">Checkout</a></li>
+          <li><a class="nav-link" href="track-order.html">Track Order</a></li>
+          <li><a class="nav-link" href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-trigger"
+          id="cartDrawerToggle"
+          aria-controls="savorCart"
+          aria-expanded="false"
+          aria-label="Open order bag drawer"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M6 7h12l1 13H5L6 7z"/>
+            <path d="M9 7a3 3 0 0 1 6 0"/>
+          </svg>
+          <span class="cart-trigger-label">Bag</span>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="mobileMenuToggle"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="checkout-hero" aria-labelledby="checkoutHeading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Obsidian Kitchen · F-6 Markaz, Islamabad</p>
+          <h1 id="checkoutHeading">Checkout &amp; Order Summary</h1>
+          <p class="hero-subtitle">
+            Freshly prepared over charred oak and espresso-infused glazes. Review your selection, set your Islamabad delivery or F-6 Markaz pickup preference, and confirm your order.
+          </p>
+        </div>
+
+        <ol class="checkout-steps" id="checkoutProgress" aria-label="Checkout progress">
+          <li class="step-item is-active" data-step="review">
+            <span class="step-index">01</span>
+            <span class="step-label">Review Bag</span>
+          </li>
+          <li class="step-item is-active" data-step="details">
+            <span class="step-index">02</span>
+            <span class="step-label">Delivery &amp; Payment</span>
+          </li>
+          <li class="step-item" data-step="confirm">
+            <span class="step-index">03</span>
+            <span class="step-label">Confirmation</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="checkout-workspace" id="checkoutSection" aria-label="Checkout Form and Summary">
+      <div class="container checkout-grid">
+        <div class="checkout-form-column">
+          <form id="checkoutForm" novalidate>
+            <!-- Fulfillment Toggle -->
+            <article class="luxury-card">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Step 01 · Fulfillment</p>
+                  <h2 class="card-title">Delivery or Self-Pickup</h2>
+                </div>
+                <span class="status-pill" id="fulfillmentEtaBadge">35–45 mins</span>
+              </header>
+
+              <div class="fulfillment-toggle" role="radiogroup" aria-label="Fulfillment Method">
+                <label class="toggle-option is-selected" for="fulfillmentDelivery">
+                  <input
+                    type="radio"
+                    id="fulfillmentDelivery"
+                    name="fulfillmentType"
+                    value="delivery"
+                    checked
+                  >
+                  <span class="toggle-title">Chauffeur Delivery</span>
+                  <span class="toggle-meta">Islamabad sectors · Complimentary over PKR 4,500</span>
+                </label>
+
+                <label class="toggle-option" for="fulfillmentPickup">
+                  <input
+                    type="radio"
+                    id="fulfillmentPickup"
+                    name="fulfillmentType"
+                    value="pickup"
+                  >
+                  <span class="toggle-title">F-6 Markaz Pickup</span>
+                  <span class="toggle-meta">Ready in 20–25 mins · Zero delivery fee</span>
+                </label>
+              </div>
+
+              <div class="fulfillment-notice" id="pickupNotice" hidden>
+                <strong>Collection Point:</strong> SavorSpot Lounge, Street 7, F-6 Markaz (Super Market), Islamabad. Present your confirmation reference at the concierge desk.
+              </div>
+            </article>
+
+            <!-- Guest Contact -->
+            <article class="luxury-card">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Step 02 · Guest Details</p>
+                  <h2 class="card-title">Contact Information</h2>
+                </div>
+              </header>
+
+              <div class="form-grid">
+                <div class="form-field form-field-full">
+                  <label for="customerName">Full Name <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    autocomplete="name"
+                    placeholder="e.g., Hamza Tariq"
+                    required
+                  >
+                  <p class="field-error" id="customerNameError" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="customerPhone">Mobile Number <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    name="customerPhone"
+                    autocomplete="tel"
+                    placeholder="0300-1234567"
+                    required
+                  >
+                  <p class="field-hint">Used for rider coordination &amp; SMS updates.</p>
+                  <p class="field-error" id="customerPhoneError" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="customerEmail">Email Address <span class="optional">(Optional)</span></label>
+                  <input
+                    type="email"
+                    id="customerEmail"
+                    name="customerEmail"
+                    autocomplete="email"
+                    placeholder="guest@example.com"
+                  >
+                  <p class="field-hint">For digital receipt copy.</p>
+                  <p class="field-error" id="customerEmailError" role="alert"></p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Delivery Address -->
+            <article class="luxury-card" id="deliveryAddressCard">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Step 03 · Destination</p>
+                  <h2 class="card-title">Islamabad Delivery Address</h2>
+                </div>
+              </header>
+
+              <div class="form-grid">
+                <div class="form-field form-field-full">
+                  <label for="deliverySector">Sector / Area <span class="req" aria-hidden="true">*</span></label>
+                  <select id="deliverySector" name="deliverySector" required>
+                    <option value="">Select an Islamabad sector or enclave</option>
+                    <option value="F-6 Markaz / F-6">F-6 Markaz &amp; F-6/1 – F-6/4 (PKR 250)</option>
+                    <option value="F-7 Markaz / F-7">F-7 Markaz (Jinnah Super) &amp; F-7/1 – F-7/4 (PKR 250)</option>
+                    <option value="F-8 Markaz / F-8">F-8 Markaz &amp; F-8/1 – F-8/4 (PKR 250)</option>
+                    <option value="E-7 Hillside">E-7 Hillside (PKR 250)</option>
+                    <option value="G-6 / G-7 / Blue Area">G-6, G-7 &amp; Blue Area (PKR 250)</option>
+                    <option value="F-10 / F-11 Markaz">F-10 &amp; F-11 Markaz (PKR 250)</option>
+                    <option value="G-9 / G-10 / G-11">G-9, G-10 &amp; G-11 (PKR 250)</option>
+                    <option value="I-8 Markaz / I-8">I-8 Markaz &amp; I-8 (PKR 250)</option>
+                    <option value="Diplomatic Enclave">Diplomatic Enclave (PKR 250)</option>
+                    <option value="D-12 / E-11">D-12 &amp; E-11 (PKR 400)</option>
+                    <option value="Bahria Town / DHA Islamabad">Bahria Town &amp; DHA Islamabad (PKR 400)</option>
+                  </select>
+                  <p class="field-error" id="deliverySectorError" role="alert"></p>
+                </div>
+
+                <div class="form-field form-field-full">
+                  <label for="streetAddress">House, Apartment &amp; Street <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="streetAddress"
+                    name="streetAddress"
+                    autocomplete="street-address"
+                    placeholder="e.g., House 14-B, Street 28, Sector F-6/2"
+                    required
+                  >
+                  <p class="field-error" id="streetAddressError" role="alert"></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="addressLandmark">Nearby Landmark <span class="optional">(Optional)</span></label>
+                  <input
+                    type="text"
+                    id="addressLandmark"
+                    name="addressLandmark"
+                    placeholder="e.g., Near Kohsar Market"
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="orderNotes">Kitchen / Rider Instructions <span class="optional">(Optional)</span></label>
+                  <input
+                    type="text"
+                    id="orderNotes"
+                    name="orderNotes"
+                    placeholder="e.g., Medium-rare sear, ring bell twice"
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Pickup Notes (shown when Pickup selected) -->
+            <article class="luxury-card" id="pickupNotesCard" hidden>
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Step 03 · Preparation</p>
+                  <h2 class="card-title">Kitchen Instructions</h2>
+                </div>
+              </header>
+              <div class="form-field">
+                <label for="pickupNotes">Special Preparation Notes <span class="optional">(Optional)</span></label>
+                <input
+                  type="text"
+                  id="pickupNotes"
+                  name="pickupNotes"
+                  placeholder="e.g., Extra espresso jus on the side, arriving in silver sedan"
+                >
+              </div>
+            </article>
+
+            <!-- Payment Selection -->
+            <article class="luxury-card">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Step 04 · Settlement</p>
+                  <h2 class="card-title">Payment Method</h2>
+                </div>
+              </header>
+
+              <div class="payment-options" role="radiogroup" aria-label="Payment Method">
+                <label class="payment-card is-selected" for="paymentCod">
+                  <input type="radio" id="paymentCod" name="paymentMethod" value="cod" checked>
+                  <span class="payment-head">
+                    <span class="payment-title">Cash on Delivery</span>
+                    <span class="payment-badge">PKR</span>
+                  </span>
+                  <span class="payment-desc">Settle in cash upon delivery or at our F-6 Markaz reception.</span>
+                </label>
+
+                <label class="payment-card" for="paymentCard">
+                  <input type="radio" id="paymentCard" name="paymentMethod" value="card">
+                  <span class="payment-head">
+                    <span class="payment-title">Credit / Debit Card</span>
+                    <span class="payment-badge">Visa · MC</span>
+                  </span>
+                  <span class="payment-desc">Encrypted card settlement with instant confirmation.</span>
+                </label>
+
+                <label class="payment-card" for="paymentWallet">
+                  <input type="radio" id="paymentWallet" name="paymentMethod" value="wallet">
+                  <span class="payment-head">
+                    <span class="payment-title">Digital Wallet</span>
+                    <span class="payment-badge">Instant</span>
+                  </span>
+                  <span class="payment-desc">SadaPay, NayaPay, JazzCash, or Easypaisa mobile account.</span>
+                </label>
+              </div>
+
+              <!-- Card Details Panel -->
+              <div class="payment-subpanel" id="cardDetailsPanel" hidden>
+                <div class="form-grid">
+                  <div class="form-field form-field-full">
+                    <label for="cardHolder">Cardholder Name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="cardHolder" name="cardHolder" placeholder="Name on card">
+                    <p class="field-error" id="cardHolderError" role="alert"></p>
+                  </div>
+                  <div class="form-field form-field-full">
+                    <label for="cardNumber">Card Number <span class="req" aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="cardNumber"
+                      name="cardNumber"
+                      inputmode="numeric"
+                      maxlength="23"
+                      placeholder="4242 4242 4242 4242"
+                    >
+                    <p class="field-error" id="cardNumberError" role="alert"></p>
+                  </div>
+                  <div class="form-field">
+                    <label for="cardExpiry">Expiry (MM/YY) <span class="req" aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="cardExpiry"
+                      name="cardExpiry"
+                      inputmode="numeric"
+                      maxlength="5"
+                      placeholder="08/29"
+                    >
+                    <p class="field-error" id="cardExpiryError" role="alert"></p>
+                  </div>
+                  <div class="form-field">
+                    <label for="cardCvc">Security Code <span class="req" aria-hidden="true">*</span></label>
+                    <input
+                      type="password"
+                      id="cardCvc"
+                      name="cardCvc"
+                      inputmode="numeric"
+                      maxlength="4"
+                      placeholder="123"
+                    >
+                    <p class="field-error" id="cardCvcError" role="alert"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Digital Wallet Details Panel -->
+              <div class="payment-subpanel" id="walletDetailsPanel" hidden>
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="walletProvider">Wallet Provider <span class="req" aria-hidden="true">*</span></label>
+                    <select id="walletProvider" name="walletProvider">
+                      <option value="">Choose wallet</option>
+                      <option value="SadaPay">SadaPay</option>
+                      <option value="NayaPay">NayaPay</option>
+                      <option value="JazzCash">JazzCash</option>
+                      <option value="Easypaisa">Easypaisa</option>
+                    </select>
+                    <p class="field-error" id="walletProviderError" role="alert"></p>
+                  </div>
+                  <div class="form-field">
+                    <label for="walletAccount">Wallet Mobile Number <span class="req" aria-hidden="true">*</span></label>
+                    <input
+                      type="tel"
+                      id="walletAccount"
+                      name="walletAccount"
+                      placeholder="03XX-XXXXXXX"
+                    >
+                    <p class="field-error" id="walletAccountError" role="alert"></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </form>
+        </div>
+
+        <!-- Sticky Right Column: Order Summary -->
+        <aside class="checkout-summary-column" aria-label="Order Summary">
+          <article class="luxury-card summary-card">
+            <header class="card-header">
+              <div>
+                <p class="card-kicker">Your Selection</p>
+                <h2 class="card-title">Order Summary</h2>
+              </div>
+              <span class="item-count-pill" id="summaryItemCount">0 items</span>
+            </header>
+
+            <div class="order-items-list" id="checkoutItemsList" aria-live="polite"></div>
+
+            <div class="empty-cart-panel" id="checkoutEmptyState" hidden>
+              <p class="empty-title">Your SavorSpot bag is currently empty.</p>
+              <p class="empty-copy">
+                Explore wood-fired steaks, espresso-glazed plates, and curated deals from our F-6 Markaz kitchen before checking out.
+              </p>
+              <div class="empty-actions">
+                <a class="btn btn-primary" href="menu.html">Explore the Menu</a>
+                <button type="button" class="btn btn-ghost" id="loadSampleCartBtn">Load Chef's Tasting Sample</button>
+              </div>
+            </div>
+
+            <div class="promo-box" id="promoBox">
+              <label class="promo-label" for="promoCodeInput">Privilege or Gift Code</label>
+              <div class="promo-row">
+                <input
+                  type="text"
+                  id="promoCodeInput"
+                  placeholder="Try SAVOR10 or ESPRESSO500"
+                  autocomplete="off"
+                >
+                <button type="button" class="btn btn-outline" id="applyPromoBtn">Apply</button>
+              </div>
+              <p class="promo-feedback" id="promoFeedback" aria-live="polite"></p>
+            </div>
+
+            <dl class="totals-breakdown">
+              <div class="totals-row">
+                <dt>Subtotal</dt>
+                <dd id="summarySubtotal">PKR 0</dd>
+              </div>
+              <div class="totals-row is-discount" id="discountRow" hidden>
+                <dt>Privilege Discount (<span id="appliedPromoLabel"></span>)</dt>
+                <dd id="summaryDiscount">- PKR 0</dd>
+              </div>
+              <div class="totals-row">
+                <dt id="deliveryFeeLabel">Delivery Fee</dt>
+                <dd id="summaryDeliveryFee">PKR 0</dd>
+              </div>
+              <div class="totals-row">
+                <dt>Thermal Luxury Packaging</dt>
+                <dd>Complimentary</dd>
+              </div>
+              <div class="totals-row totals-grand">
+                <dt>Total Payable</dt>
+                <dd id="summaryTotal">PKR 0</dd>
+              </div>
+            </dl>
+
+            <p class="delivery-threshold-note" id="deliveryThresholdNote"></p>
+
+            <button
+              type="submit"
+              form="checkoutForm"
+              class="btn btn-primary btn-block"
+              id="placeOrderBtn"
+            >
+              Confirm &amp; Place Order
+            </button>
+
+            <p class="checkout-assurance">
+              Prepared fresh to order in F-6 Markaz. Orders are saved locally for instant tracking on <a href="track-order.html">Track Order</a>.
+            </p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Order Confirmation Receipt View -->
+    <section
+      class="confirmation-section"
+      id="orderConfirmationSection"
+      hidden
+      aria-live="polite"
+      aria-labelledby="confirmationHeading"
+    >
+      <div class="container">
+        <article class="luxury-card receipt-card">
+          <header class="receipt-header">
+            <div class="receipt-crest" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <p class="eyebrow">Order Confirmed · F-6 Markaz Kitchen</p>
+            <h2 id="confirmationHeading">Thank You for Dining with SavorSpot</h2>
+            <p class="receipt-subtitle">
+              Your order has been dispatched to our culinary team. Keep your reference number below to follow preparation and dispatch.
+            </p>
+            <div class="receipt-ref-banner">
+              <span>Order Reference</span>
+              <strong id="receiptOrderRef">SAV-000000-0000</strong>
+            </div>
+          </header>
+
+          <div class="receipt-meta-grid">
+            <article class="receipt-meta-box">
+              <h3>Fulfillment &amp; Timing</h3>
+              <p id="receiptFulfillment">—</p>
+              <p class="muted" id="receiptTimestamp">—</p>
+            </article>
+            <article class="receipt-meta-box">
+              <h3>Guest &amp; Destination</h3>
+              <p id="receiptCustomer">—</p>
+              <p class="muted" id="receiptAddress">—</p>
+            </article>
+            <article class="receipt-meta-box">
+              <h3>Settlement</h3>
+              <p id="receiptPayment">—</p>
+              <p class="muted" id="receiptNotes">No special instructions</p>
+            </article>
+          </div>
+
+          <div class="receipt-items-wrap">
+            <h3 class="receipt-section-title">Itemized Summary</h3>
+            <ul class="receipt-items-list" id="receiptItemsList"></ul>
+          </div>
+
+          <dl class="totals-breakdown receipt-totals">
+            <div class="totals-row">
+              <dt>Subtotal</dt>
+              <dd id="receiptSubtotal">PKR 0</dd>
+            </div>
+            <div class="totals-row is-discount" id="receiptDiscountRow" hidden>
+              <dt>Privilege Discount</dt>
+              <dd id="receiptDiscount">- PKR 0</dd>
+            </div>
+            <div class="totals-row">
+              <dt>Delivery Fee</dt>
+              <dd id="receiptDelivery">PKR 0</dd>
+            </div>
+            <div class="totals-row totals-grand">
+              <dt>Total Paid / Due</dt>
+              <dd id="receiptTotal">PKR 0</dd>
+            </div>
+          </dl>
+
+          <footer class="receipt-actions">
+            <a class="btn btn-primary" id="trackOrderLink" href="track-order.html">Track This Order</a>
+            <button type="button" class="btn btn-outline" id="printReceiptBtn">Print Receipt</button>
+            <a class="btn btn-ghost" href="menu.html">Return to Menu</a>
+          </footer>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section class="footer-brand" aria-label="SavorSpot Location and Hours">
+        <a class="brand footer-brand-link" href="../index.html">
+          <span class="brand-crest" aria-hidden="true">S</span>
+          <span class="brand-text">
+            <span class="brand-name">SavorSpot</span>
+            <span class="brand-location">Obsidian &amp; Espresso Dining</span>
+          </span>
+        </a>
+        <p class="footer-copy">
+          Wood-fired culinary craft and espresso-infused gastronomy in the heart of F-6 Markaz, Super Market, Islamabad.
+        </p>
+        <p class="footer-meta">Open Daily: 12:00 PM – 12:30 AM · +92 51 282 4910</p>
+      </section>
+
+      <nav class="footer-nav" aria-label="Dining Navigation">
+        <h2 class="footer-heading">Dining</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Chef Deals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Guest Services">
+        <h2 class="footer-heading">Guest Services</h2>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="track-order.html">Track Order</a></li>
+          <li><a href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SavorSpot Islamabad. F-6 Markaz, Super Market.</p>
+    </div>
+  </footer>
+
+  <!-- Shared #savorCart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerBackdrop" hidden></div>
+  <aside
+    id="savorCart"
+    class="cart-drawer"
+    aria-hidden="true"
+    aria-labelledby="cartDrawerTitle"
+    tabindex="-1"
+  >
+    <header class="drawer-header">
+      <div>
+        <p class="card-kicker">SavorSpot Bag</p>
+        <h2 id="cartDrawerTitle">Your Order</h2>
+      </div>
+      <button type="button" class="icon-btn" id="closeCartDrawer" aria-label="Close order bag">
+        &times;
+      </button>
+    </header>
+
+    <div class="drawer-body" id="drawerCartItems"></div>
+
+    <footer class="drawer-footer">
+      <div class="drawer-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="drawerSubtotal">PKR 0</strong>
+      </div>
+      <div class="drawer-actions">
+        <button type="button" class="btn btn-primary btn-block" id="drawerProceedBtn">
+          Continue to Checkout
+        </button>
+        <a class="btn btn-ghost btn-block" href="menu.html">Add More Dishes</a>
+      </div>
+    </footer>
+  </aside>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../js/checkout.js" defer></script>
+</body>
+</html>
