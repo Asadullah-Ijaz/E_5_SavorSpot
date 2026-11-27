@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table or private dining salon at SavorSpot in F-6 Markaz, Islamabad. Choose from the Main Dining Room, Courtyard/Terrace, or Chef's Private Table.">
+  <title>Table &amp; Private Dining Reservations | SavorSpot Islamabad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reservations.css">
+  <script src="../js/reservations.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="SavorSpot Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">Savor<span>Spot</span></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="deals.html" class="nav-link">Deals</a></li>
+          <li><a href="reservations.html" class="nav-link active" aria-current="page">Reservations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-toggle"
+          id="cartToggle"
+          aria-label="Open order cart"
+          aria-controls="savorCart"
+          aria-expanded="false"
+        >
+          <svg class="icon-cart" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="cartCount" data-cart-count>0</span>
+        </button>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="siteNav"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="reservations-hero" aria-labelledby="reservationsHeading">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">F-6 Markaz, Islamabad &middot; Table &amp; Private Dining</p>
+          <h1 id="reservationsHeading">Reserve Your Table in <em>Obsidian &amp; Gold</em></h1>
+          <p class="hero-lead">
+            From intimate two-top candlelit booths to sixteen-guest tasting evenings in our Chef&rsquo;s Private Salon,
+            every seating at SavorSpot pairs slow-roasted espresso alchemy with wood-fired culinary craft.
+          </p>
+          <div class="hero-actions">
+            <a href="#bookingSection" class="btn-primary">Book a Table</a>
+            <a href="#seatingHighlights" class="btn-ghost">Explore Seating Zones</a>
+          </div>
+        </div>
+
+        <aside class="hero-meta-card" aria-label="Venue reservations overview">
+          <p class="meta-card-kicker">Concierge &amp; Service</p>
+          <dl class="venue-meta-list">
+            <div class="venue-meta-item">
+              <dt>Dining Hours</dt>
+              <dd>Daily, 12:30 PM &ndash; 12:00 AM</dd>
+            </div>
+            <div class="venue-meta-item">
+              <dt>Address</dt>
+              <dd>Plot 14, Street 7, F-6 Markaz, Islamabad</dd>
+            </div>
+            <div class="venue-meta-item">
+              <dt>Private Dining Desk</dt>
+              <dd>+92 51 282 4419 &middot; concierge@savorspot.pk</dd>
+            </div>
+            <div class="venue-meta-item">
+              <dt>Dress &amp; Valet</dt>
+              <dd>Smart Evening Casual &middot; Complimentary Valet</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seating-highlights" id="seatingHighlights" aria-labelledby="seatingHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Curated Atmospheres</p>
+          <h2 id="seatingHeading">Select Your Preferred Dining Zone</h2>
+          <p class="section-subtitle">
+            Each wing of SavorSpot is tuned to a distinct evening mood. Preview a zone below or choose it directly in your reservation.
+          </p>
+        </header>
+
+        <div class="seating-grid">
+          <article class="seating-card" data-zone="Main Dining Room">
+            <div class="seating-card-top">
+              <span class="zone-tag">2&ndash;8 Guests</span>
+              <span class="zone-index" aria-hidden="true">01</span>
+            </div>
+            <h3>Main Dining Room</h3>
+            <p class="seating-desc">
+              Plush espresso-leather banquettes, warm brass pendants, and direct sightlines to the open obsidian hearth and single-origin espresso bar.
+            </p>
+            <ul class="seating-features">
+              <li>Acoustic velvet booths &amp; table-side pour-overs</li>
+              <li>Full &agrave; la carte &amp; seasonal grill menu</li>
+              <li>Ideal for date nights &amp; relaxed evening dining</li>
+            </ul>
+            <button type="button" class="btn-zone-select" data-select-zone="Main Dining Room">
+              Select Main Dining Room
+            </button>
+          </article>
+
+          <article class="seating-card" data-zone="Courtyard/Terrace">
+            <div class="seating-card-top">
+              <span class="zone-tag">2&ndash;10 Guests</span>
+              <span class="zone-index" aria-hidden="true">02</span>
+            </div>
+            <h3>Courtyard/Terrace</h3>
+            <p class="seating-desc">
+              Lantern-lit olive trees, cedarwood seating, and gentle Margalla evening air beneath a retractable twilight pergola with ambient fire tables.
+            </p>
+            <ul class="seating-features">
+              <li>Heated winter braziers &amp; mist-cooled summers</li>
+              <li>Artisanal mocktail &amp; cold-brew pairing trolley</li>
+              <li>Perfect for twilight gatherings &amp; small groups</li>
+            </ul>
+            <button type="button" class="btn-zone-select" data-select-zone="Courtyard/Terrace">
+              Select Courtyard/Terrace
+            </button>
+          </article>
+
+          <article class="seating-card seating-card--featured" data-zone="Chef's Private Table">
+            <div class="seating-card-top">
+              <span class="zone-tag zone-tag--gold">6&ndash;16 Guests</span>
+              <span class="zone-index" aria-hidden="true">03</span>
+            </div>
+            <h3>Chef&rsquo;s Private Table</h3>
+            <p class="seating-desc">
+              A sound-insulated walnut and dark marble salon featuring a monolithic sixteen-seat table, dedicated host service, and bespoke tasting menus.
+            </p>
+            <ul class="seating-features">
+              <li>Custom 5-course chef tasting &amp; calligraphy menus</li>
+              <li>Private AV &amp; floral centerpiece coordination</li>
+              <li>Tailored for anniversaries, VIP &amp; executive dinners</li>
+            </ul>
+            <button type="button" class="btn-zone-select" data-select-zone="Chef's Private Table">
+              Select Chef&rsquo;s Private Table
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-workspace" id="bookingSection" aria-labelledby="bookingHeading">
+      <div class="container booking-grid">
+        <article class="booking-form-card">
+          <header class="card-header">
+            <p class="eyebrow">Instant Table Request</p>
+            <h2 id="bookingHeading">Reservation Details</h2>
+            <p class="card-subtitle">
+              Complete the fields below to receive an immediate confirmation reference. Your reservation is saved locally for quick access.
+            </p>
+          </header>
+
+          <form id="reservationForm" class="reservation-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="guestName">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="guestName"
+                  name="guestName"
+                  placeholder="e.g. Ayesha Siddiqui"
+                  autocomplete="name"
+                  required
+                  aria-describedby="guestNameError"
+                >
+                <p class="field-error" id="guestNameError" role="alert"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="guestPhone">Phone Number <span class="required-mark" aria-hidden="true">*</span></label>
+                <input
+                  type="tel"
+                  id="guestPhone"
+                  name="guestPhone"
+                  placeholder="e.g. +92 300 5551234"
+                  autocomplete="tel"
+                  required
+                  aria-describedby="guestPhoneError"
+                >
+                <p class="field-error" id="guestPhoneError" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="guestEmail">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="guestEmail"
+                  name="guestEmail"
+                  placeholder="e.g. ayesha@example.com"
+                  autocomplete="email"
+                  required
+                  aria-describedby="guestEmailError"
+                >
+                <p class="field-error" id="guestEmailError" role="alert"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="partySize">Party Size <span class="required-mark" aria-hidden="true">*</span></label>
+                <select id="partySize" name="partySize" required aria-describedby="partySizeError">
+                  <option value="">Select guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="8">8 Guests</option>
+                  <option value="10">10 Guests</option>
+                  <option value="12">12 Guests (Private Dining)</option>
+                  <option value="16">16 Guests (Full Chef&rsquo;s Salon)</option>
+                </select>
+                <p class="field-error" id="partySizeError" role="alert"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="reservationDate">Preferred Date <span class="required-mark" aria-hidden="true">*</span></label>
+                <input
+                  type="date"
+                  id="reservationDate"
+                  name="reservationDate"
+                  required
+                  aria-describedby="reservationDateError"
+                >
+                <p class="field-error" id="reservationDateError" role="alert"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="timeSlot">Time Slot <span class="required-mark" aria-hidden="true">*</span></label>
+                <select id="timeSlot" name="timeSlot" required aria-describedby="timeSlotError">
+                  <option value="">Select a seating window</option>
+                  <option value="1:00 PM">1:00 PM &mdash; Midday Lunch</option>
+                  <option value="2:30 PM">2:30 PM &mdash; Afternoon Espresso Lounge</option>
+                  <option value="6:30 PM">6:30 PM &mdash; Early Twilight Seating</option>
+                  <option value="7:30 PM">7:30 PM &mdash; Prime Dinner Service</option>
+                  <option value="8:30 PM">8:30 PM &mdash; Evening Signature Seating</option>
+                  <option value="9:30 PM">9:30 PM &mdash; Late Dinner Service</option>
+                  <option value="10:30 PM">10:30 PM &mdash; Supper &amp; Roast Lounge</option>
+                </select>
+                <p class="field-error" id="timeSlotError" role="alert"></p>
+              </div>
+            </div>
+
+            <fieldset class="zone-fieldset" aria-describedby="seatingZoneError">
+              <legend>Seating Zone <span class="required-mark" aria-hidden="true">*</span></legend>
+              <div class="zone-options">
+                <label class="zone-option" for="zoneMain">
+                  <input type="radio" id="zoneMain" name="seatingZone" value="Main Dining Room" checked>
+                  <span class="zone-option-body">
+                    <span class="zone-option-title">Main Dining Room</span>
+                    <span class="zone-option-meta">2&ndash;8 guests &middot; Hearth &amp; Velvet Booths</span>
+                  </span>
+                </label>
+
+                <label class="zone-option" for="zoneCourtyard">
+                  <input type="radio" id="zoneCourtyard" name="seatingZone" value="Courtyard/Terrace">
+                  <span class="zone-option-body">
+                    <span class="zone-option-title">Courtyard/Terrace</span>
+                    <span class="zone-option-meta">2&ndash;10 guests &middot; Open-Air Lantern Pergola</span>
+                  </span>
+                </label>
+
+                <label class="zone-option" for="zonePrivate">
+                  <input type="radio" id="zonePrivate" name="seatingZone" value="Chef's Private Table">
+                  <span class="zone-option-body">
+                    <span class="zone-option-title">Chef&rsquo;s Private Table</span>
+                    <span class="zone-option-meta">6&ndash;16 guests &middot; Enclosed Tasting Salon</span>
+                  </span>
+                </label>
+              </div>
+              <p class="field-error" id="seatingZoneError" role="alert"></p>
+            </fieldset>
+
+            <div class="form-field">
+              <div class="label-row">
+                <label for="reservationNotes">Special Requests &amp; Dietary Notes</label>
+                <span class="char-counter" id="notesCount">0 / 400</span>
+              </div>
+              <textarea
+                id="reservationNotes"
+                name="reservationNotes"
+                rows="3"
+                maxlength="400"
+                placeholder="Share allergies, celebration details, corner booth preferences, or private dining tasting requests..."
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary" id="submitReservationBtn">Confirm Reservation</button>
+              <button type="reset" class="btn-ghost" id="resetReservationBtn">Clear Form</button>
+            </div>
+          </form>
+        </article>
+
+        <aside class="summary-column" aria-label="Booking confirmation and saved reservations">
+          <article class="confirmation-card" id="confirmationCard" aria-live="polite">
+            <header class="confirmation-header">
+              <div>
+                <p class="eyebrow">Booking Summary</p>
+                <h2 id="confirmationTitle">Reservation Preview</h2>
+              </div>
+              <span class="status-pill status-pill--preview" id="confirmationStatus">Draft Preview</span>
+            </header>
+
+            <div class="reference-banner">
+              <span class="reference-label">Booking Reference</span>
+              <strong class="reference-code" id="bookingReference">Awaiting Confirmation</strong>
+            </div>
+
+            <dl class="summary-details">
+              <div class="summary-row">
+                <dt>Guest</dt>
+                <dd id="summaryGuest">Not entered yet</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Contact</dt>
+                <dd id="summaryContact">Phone &amp; email pending</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Date &amp; Time</dt>
+                <dd id="summaryDateTime">Select date &amp; time slot</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Party Size</dt>
+                <dd id="summaryParty">2 Guests</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Seating Zone</dt>
+                <dd id="summaryZone">Main Dining Room</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Notes</dt>
+                <dd id="summaryNotes">None specified</dd>
+              </div>
+            </dl>
+
+            <div class="confirmation-actions" id="confirmationActions" hidden>
+              <button type="button" class="btn-secondary" id="copyRefBtn">Copy Reference</button>
+              <button type="button" class="btn-ghost" id="printConfirmationBtn">Print Pass</button>
+              <button type="button" class="btn-ghost" id="newBookingBtn">New Booking</button>
+            </div>
+          </article>
+
+          <article class="saved-reservations-card" aria-labelledby="savedHeading">
+            <header class="saved-header">
+              <div>
+                <p class="eyebrow">Local Concierge Log</p>
+                <h3 id="savedHeading">Saved Reservations</h3>
+              </div>
+              <span class="saved-count-badge" id="savedReservationsCount">0</span>
+            </header>
+            <div id="savedReservationsList" class="saved-list">
+              <p class="empty-saved-state">No confirmed reservations saved on this device yet.</p>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="brand-logo">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-text">Savor<span>Spot</span></span>
+        </a>
+        <p class="footer-tagline">
+          Obsidian-crafted dining, slow-roasted espresso artistry, and curated private salons in the heart of F-6 Markaz, Islamabad.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-info">
+        <h4>Visit Us</h4>
+        <p>Plot 14, Street 7, F-6 Markaz (Super Market), Islamabad</p>
+        <p>Daily: 12:30 PM &ndash; 12:00 AM</p>
+        <p>+92 51 282 4419 &middot; concierge@savorspot.pk</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="footerYear">2026</span> SavorSpot Islamabad. All rights reserved.</p>
+      <p>Obsidian &amp; Espresso Culinary House</p>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+
+  <aside
+    id="savorCart"
+    class="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="savorCartTitle"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <header class="cart-drawer-header">
+      <div>
+        <p class="eyebrow">Pre-Order &amp; Takeaway</p>
+        <h2 id="savorCartTitle">Your SavorSpot Cart</h2>
+      </div>
+      <button type="button" class="drawer-close" id="closeCartBtn" aria-label="Close cart drawer">&times;</button>
+    </header>
+
+    <div class="cart-drawer-body" id="cartItemsContainer"></div>
+
+    <footer class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rs. 0</strong>
+      </div>
+      <p class="cart-note">Items added from our Menu or Deals stay synced across all pages.</p>
+      <div class="cart-footer-actions">
+        <button type="button" class="btn-ghost" id="clearCartBtn">Clear Cart</button>
+        <a href="menu.html" class="btn-primary">Browse Menu</a>
+      </div>
+    </footer>
+  </aside>
+
+  <div id="savorToast" class="savor-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
