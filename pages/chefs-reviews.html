@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Meet the culinary team behind SavorSpot in F-6 Markaz, Islamabad, and read verified guest reviews or share your own dining experience."
+  />
+  <title>Chefs &amp; Guest Reviews | SavorSpot — F-6 Markaz, Islamabad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/chefs-reviews.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to chefs and reviews content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SavorSpot Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">
+          <span class="brand-name">SavorSpot</span>
+          <span class="brand-loc">F-6 Markaz, Islamabad</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="deals.html" class="nav-link">Deals</a></li>
+          <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="chefs-reviews.html" class="nav-link is-active" aria-current="page">Chef's &amp; Reviews</a></li>
+          <li><a href="catering.html" class="nav-link">Catering</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-trigger"
+          id="cartTrigger"
+          aria-controls="savorCart"
+          aria-expanded="false"
+          aria-label="Open order cart"
+        >
+          <svg class="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <path d="M6 6L5 3H2" />
+            <circle cx="9.5" cy="19.5" r="1.25" />
+            <circle cx="17.5" cy="19.5" r="1.25" />
+          </svg>
+          <span class="cart-label">Order</span>
+          <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="chefs-hero" aria-labelledby="chefsHeroTitle">
+      <div class="container hero-content">
+        <p class="eyebrow">Culinary Leadership &amp; Guest Voices</p>
+        <h1 id="chefsHeroTitle">The Artisans &amp; Our Guests</h1>
+        <p class="hero-subtitle">
+          Meet the brigade shaping contemporary Pakistani fine dining and specialty espresso
+          craft in F-6 Markaz, Islamabad — and explore reflections from tables we have hosted.
+        </p>
+
+        <div class="hero-metrics" aria-label="Dining room highlights">
+          <div class="metric-pill">
+            <span class="metric-value" id="avgRatingValue">4.8</span>
+            <span class="metric-label">Average Rating</span>
+          </div>
+          <div class="metric-pill">
+            <span class="metric-value" id="totalReviewsCount">6</span>
+            <span class="metric-label">Guest Reviews</span>
+          </div>
+          <div class="metric-pill">
+            <span class="metric-value">4</span>
+            <span class="metric-label">Master Artisans</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chefs-section" aria-labelledby="chefsSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Kitchen &amp; Espresso Brigade</p>
+          <h2 id="chefsSectionTitle">Meet Our Culinary Team</h2>
+          <p class="section-lead">
+            Every plate and pour at SavorSpot pairs classical heirloom technique with modern
+            precision over live charcoal and single-origin roast profiles.
+          </p>
+        </div>
+
+        <div class="chefs-grid">
+          <article class="chef-card">
+            <div class="chef-card-top">
+              <div class="chef-crest" aria-hidden="true">
+                <span>ZK</span>
+              </div>
+              <div class="chef-heading">
+                <span class="chef-role">Executive Chef</span>
+                <h3 class="chef-name">Chef Zayd Kamal</h3>
+                <p class="chef-experience">16 Years Experience • Islamabad &amp; Istanbul</p>
+              </div>
+            </div>
+            <div class="chef-specialty-box">
+              <span class="specialty-label">Specialty</span>
+              <p class="specialty-value">24-Hour Marrow Braises &amp; Kashmiri Saffron Reductions</p>
+            </div>
+            <p class="chef-bio">
+              Trained in classical Anatolian fire-cooking and Lahori heirloom kitchens, Chef Zayd
+              leads SavorSpot's tasting menu — balancing slow-rendered spices with crisp, modern
+              plating on matte obsidian stoneware.
+            </p>
+          </article>
+
+          <article class="chef-card">
+            <div class="chef-card-top">
+              <div class="chef-crest" aria-hidden="true">
+                <span>MN</span>
+              </div>
+              <div class="chef-heading">
+                <span class="chef-role">Head Pastry &amp; Saffronier</span>
+                <h3 class="chef-name">Chef Meher Nisar</h3>
+                <p class="chef-experience">11 Years Experience • Lahore &amp; Paris</p>
+              </div>
+            </div>
+            <div class="chef-specialty-box">
+              <span class="specialty-label">Specialty</span>
+              <p class="specialty-value">Laminated Espresso Viennoiserie &amp; Spun Amber Tarts</p>
+            </div>
+            <p class="chef-bio">
+              Chef Meher bridges French patisserie structure with northern Pakistani botanicals,
+              crafting delicate mille-feuille layers infused with dark roast espresso, roasted
+              pistachio frangipane, and cardamom blossom.
+            </p>
+          </article>
+
+          <article class="chef-card">
+            <div class="chef-card-top">
+              <div class="chef-crest" aria-hidden="true">
+                <span>TH</span>
+              </div>
+              <div class="chef-heading">
+                <span class="chef-role">Master Grill &amp; Smoke Artisan</span>
+                <h3 class="chef-name">Chef Tariq Hayat</h3>
+                <p class="chef-experience">14 Years Experience • Peshawar &amp; Dubai</p>
+              </div>
+            </div>
+            <div class="chef-specialty-box">
+              <span class="specialty-label">Specialty</span>
+              <p class="specialty-value">Binchotan Charcoal Lamb &amp; Wild Mountain Herb Crusts</p>
+            </div>
+            <p class="chef-bio">
+              Working exclusively over aged olive-wood and binchotan embers, Chef Tariq oversees
+              our dry-aging cellar and live grill station, locking deep smoke aroma into every
+              prime cut without masking delicate marbling.
+            </p>
+          </article>
+
+          <article class="chef-card">
+            <div class="chef-card-top">
+              <div class="chef-crest" aria-hidden="true">
+                <span>AR</span>
+              </div>
+              <div class="chef-heading">
+                <span class="chef-role">Head Barista &amp; Elixir Curator</span>
+                <h3 class="chef-name">Amina Raza</h3>
+                <p class="chef-experience">9 Years Experience • Islamabad &amp; Melbourne</p>
+              </div>
+            </div>
+            <div class="chef-specialty-box">
+              <span class="specialty-label">Specialty</span>
+              <p class="specialty-value">Smoked Botanical Elixirs &amp; Single-Origin Espresso</p>
+            </div>
+            <p class="chef-bio">
+              Amina curates SavorSpot's zero-proof pairing program and small-batch espresso bar,
+              blending Ethiopian micro-lots with cardamom mist, rosewater reductions, and
+              torched cinnamon aromatics.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section" aria-labelledby="reviewsSectionTitle">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Verified Table Voices</p>
+          <h2 id="reviewsSectionTitle">Guest Reviews</h2>
+          <p class="section-lead">
+            Filter impressions by dining occasion or star rating, or add your own reflection below.
+          </p>
+        </div>
+
+        <div class="reviews-toolbar">
+          <div class="filter-group">
+            <span class="filter-label">Occasion</span>
+            <div class="filter-tabs" role="tablist" aria-label="Filter reviews by occasion">
+              <button
+                type="button"
+                class="filter-tab is-active"
+                role="tab"
+                aria-selected="true"
+                data-occasion="all"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                role="tab"
+                aria-selected="false"
+                data-occasion="Date Night"
+              >
+                Date Night
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                role="tab"
+                aria-selected="false"
+                data-occasion="Family Dinner"
+              >
+                Family Dinner
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                role="tab"
+                aria-selected="false"
+                data-occasion="Business Hosting"
+              >
+                Business Hosting
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                role="tab"
+                aria-selected="false"
+                data-occasion="Tasting Menu"
+              >
+                Tasting Menu
+              </button>
+              <button
+                type="button"
+                class="filter-tab"
+                role="tab"
+                aria-selected="false"
+                data-occasion="Espresso & Dessert"
+              >
+                Espresso &amp; Dessert
+              </button>
+            </div>
+          </div>
+
+          <div class="toolbar-right">
+            <div class="rating-filter-wrap">
+              <label for="ratingFilter" class="filter-label">Rating</label>
+              <select id="ratingFilter" class="rating-select">
+                <option value="all">All Ratings</option>
+                <option value="5">5 Stars Only</option>
+                <option value="4">4 Stars &amp; Above</option>
+              </select>
+            </div>
+            <p class="reviews-status" id="reviewsStatus" aria-live="polite">
+              Showing 6 guest reviews
+            </p>
+          </div>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+          <article class="review-card" data-rating="5" data-occasion="Tasting Menu">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Hamza &amp; Sana Farooq</h3>
+                <p class="review-date">November 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Tasting Menu</span>
+              <span class="dish-tag">24-Hour Wagyu Nihari</span>
+            </div>
+            <p class="review-text">
+              "The Wagyu Nihari is extraordinary — fork-tender with a saffron marrow glaze that
+              feels both nostalgic and refined. Watching the kitchen team plate under warm brass
+              lighting made our anniversary unforgettable."
+            </p>
+          </article>
+
+          <article class="review-card" data-rating="5" data-occasion="Date Night">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Dania Qureshi</h3>
+                <p class="review-date">November 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Date Night</span>
+              <span class="dish-tag">Margalla Twilight Terrace</span>
+            </div>
+            <p class="review-text">
+              "Intimate, unhurried, and effortlessly atmospheric. The cardamom rose spritz and
+              charcoal-seared lamb rack arrived at the exact right pace. Easily the finest evening
+              dining room in F-6 Markaz."
+            </p>
+          </article>
+
+          <article class="review-card" data-rating="5" data-occasion="Espresso & Dessert">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Bilal Mansoor</h3>
+                <p class="review-date">October 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Espresso &amp; Dessert</span>
+              <span class="dish-tag">Espresso Gold Mille-Feuille</span>
+            </div>
+            <p class="review-text">
+              "Dropped in late evening for the Saffron Espresso Elixir and Chef Meher's
+              mille-feuille. The pastry crackles cleanly and the espresso crema has zero
+              bitterness — balanced to perfection."
+            </p>
+          </article>
+
+          <article class="review-card" data-rating="4" data-occasion="Business Hosting">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Dr. Kamran Siddiqui</h3>
+                <p class="review-date">October 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Business Hosting</span>
+              <span class="dish-tag">Himalayan Herb Lamb Rack</span>
+            </div>
+            <p class="review-text">
+              "Hosted visiting colleagues in the main obsidian hall. Acoustics are calm enough
+              for real conversation, service is discreet, and the lamb rack with smoked eggplant
+              puree impressed everyone at the table."
+            </p>
+          </article>
+
+          <article class="review-card" data-rating="5" data-occasion="Family Dinner">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Ayesha &amp; Omar Javed</h3>
+                <p class="review-date">October 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Family Dinner</span>
+              <span class="dish-tag">Pistachio &amp; Saffron Tart</span>
+            </div>
+            <p class="review-text">
+              "Brought my parents for dinner and the staff treated us like family. Every course
+              felt thoughtful, and ending with the pistachio saffron tart had the whole table
+              planning our next visit."
+            </p>
+          </article>
+
+          <article class="review-card" data-rating="5" data-occasion="Date Night">
+            <div class="review-top">
+              <div>
+                <h3 class="reviewer-name">Zainab Tariq</h3>
+                <p class="review-date">September 2026 • Verified Table</p>
+              </div>
+              <span class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="review-tags">
+              <span class="card-tag">Date Night</span>
+              <span class="dish-tag">Saffron Espresso Elixir</span>
+            </div>
+            <p class="review-text">
+              "From the walnut paneling to the torched cinnamon aroma at the espresso bar, every
+              detail feels intentional. SavorSpot sets a genuinely elevated standard for
+              Islamabad."
+            </p>
+          </article>
+        </div>
+
+        <p class="reviews-empty" id="reviewsEmpty" hidden>
+          No guest reviews match the selected occasion and rating filter.
+        </p>
+      </div>
+    </section>
+
+    <section class="submit-review-section" aria-labelledby="submitReviewTitle">
+      <div class="container">
+        <div class="review-form-card">
+          <div class="review-form-intro">
+            <p class="eyebrow">Share Your Experience</p>
+            <h2 id="submitReviewTitle">Leave a Guest Review</h2>
+            <p class="section-lead">
+              Dined with us recently in F-6 Markaz? Share your thoughts on the kitchen,
+              espresso bar, or evening ambiance. Your review is saved locally and appears
+              immediately above.
+            </p>
+          </div>
+
+          <form class="review-form" id="reviewForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="reviewerName">Your Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="reviewerName"
+                  name="reviewerName"
+                  placeholder="e.g., Nadia Shah"
+                  required
+                  minlength="2"
+                  maxlength="60"
+                  autocomplete="name"
+                />
+                <span class="field-error" id="nameError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="reviewOccasion">Dining Occasion <span aria-hidden="true">*</span></label>
+                <select id="reviewOccasion" name="reviewOccasion" required>
+                  <option value="Date Night">Date Night</option>
+                  <option value="Family Dinner">Family Dinner</option>
+                  <option value="Business Hosting">Business Hosting</option>
+                  <option value="Tasting Menu">Tasting Menu</option>
+                  <option value="Espresso & Dessert">Espresso &amp; Dessert</option>
+                </select>
+                <span class="field-error" id="occasionError" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <span class="field-label" id="ratingGroupLabel">Your Rating <span aria-hidden="true">*</span></span>
+                <div class="star-rating-input" role="radiogroup" aria-labelledby="ratingGroupLabel">
+                  <input type="radio" id="star5" name="reviewRating" value="5" checked />
+                  <label for="star5" title="5 stars">&#9733;</label>
+                  <input type="radio" id="star4" name="reviewRating" value="4" />
+                  <label for="star4" title="4 stars">&#9733;</label>
+                  <input type="radio" id="star3" name="reviewRating" value="3" />
+                  <label for="star3" title="3 stars">&#9733;</label>
+                  <input type="radio" id="star2" name="reviewRating" value="2" />
+                  <label for="star2" title="2 stars">&#9733;</label>
+                  <input type="radio" id="star1" name="reviewRating" value="1" />
+                  <label for="star1" title="1 star">&#9733;</label>
+                </div>
+                <span class="field-error" id="ratingError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="reviewDish">Favorite Dish or Elixir</label>
+                <input
+                  type="text"
+                  id="reviewDish"
+                  name="reviewDish"
+                  placeholder="e.g., 24-Hour Wagyu Nihari"
+                  maxlength="60"
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="reviewComment">Your Review <span aria-hidden="true">*</span></label>
+              <textarea
+                id="reviewComment"
+                name="reviewComment"
+                rows="4"
+                placeholder="Tell us about the flavors, hospitality, or atmosphere..."
+                required
+                minlength="15"
+                maxlength="500"
+              ></textarea>
+              <span class="field-error" id="commentError" aria-live="polite"></span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-gold">Publish Guest Review</button>
+              <p class="form-note">Reviews are stored in your browser via <code>savorReviews</code>.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-text">
+            <span class="brand-name">SavorSpot</span>
+            <span class="brand-loc">F-6 Markaz, Islamabad</span>
+          </span>
+        </a>
+        <p class="footer-copy">
+          Contemporary Pakistani fine dining and artisanal espresso bar crafted in deep obsidian and warm brass.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Curated Deals</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="chefs-reviews.html">Chef's &amp; Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Hospitality</h2>
+        <ul class="footer-links">
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="catering.html">Private Catering</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact &amp; Directions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Hours &amp; Location</h2>
+        <p class="footer-meta">Street 7, F-6 Markaz, Islamabad</p>
+        <p class="footer-meta">Tue – Sun: 1:00 PM – 12:30 AM</p>
+        <p class="footer-meta">Concierge: +92 51 555 0194</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SavorSpot Islamabad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shared SavorCart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+  <aside
+    class="cart-drawer"
+    id="savorCart"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cartDrawerTitle"
+    hidden
+  >
+    <div class="cart-header">
+      <div>
+        <h2 id="cartDrawerTitle">Your SavorSpot Order</h2>
+        <p class="cart-subtitle">F-6 Markaz Kitchen &amp; Espresso Bar</p>
+      </div>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Close order drawer">
+        &times;
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">PKR 0</strong>
+      </div>
+      <div class="cart-footer-actions">
+        <button type="button" class="btn-outline" id="cartClearBtn">Clear Order</button>
+        <a href="menu.html" class="btn-gold" id="cartCheckoutBtn">Continue to Menu</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../js/chefs-reviews.js" defer></script>
+</body>
+</html>
