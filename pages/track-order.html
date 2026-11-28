@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your live SavorSpot order from our F-6 Markaz, Islamabad kitchen through preparation, packaging, and dispatch.">
+  <title>Live Order Tracking | SavorSpot Islamabad</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/track-order.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to order tracking content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SavorSpot Home">
+        <span class="brand-crest" aria-hidden="true">S</span>
+        <span class="brand-text">
+          <span class="brand-name">SavorSpot</span>
+          <span class="brand-location">F-6 Markaz · Islamabad</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="menu.html">Menu</a></li>
+          <li><a class="nav-link" href="deals.html">Deals</a></li>
+          <li><a class="nav-link" href="reservations.html">Reservations</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link" href="checkout.html">Checkout</a></li>
+          <li><a class="nav-link is-active" href="track-order.html" aria-current="page">Track Order</a></li>
+          <li><a class="nav-link" href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-trigger"
+          id="cartDrawerToggle"
+          aria-controls="savorCart"
+          aria-expanded="false"
+          aria-label="Open order bag drawer"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M6 7h12l1 13H5L6 7z"/>
+            <path d="M9 7a3 3 0 0 1 6 0"/>
+          </svg>
+          <span class="cart-trigger-label">Bag</span>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="mobileMenuToggle"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="tracking-hero" aria-labelledby="trackingHeading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Kitchen Telemetry · F-6 Markaz, Islamabad</p>
+          <h1 id="trackingHeading">Live Order Tracking</h1>
+          <p class="hero-subtitle">
+            Follow every stage from the oak-fired grill to sealed dispatch or F-6 Markaz concierge collection.
+          </p>
+        </div>
+
+        <article class="luxury-card lookup-card" aria-label="Order Reference Lookup">
+          <form id="orderLookupForm" class="lookup-form" novalidate>
+            <label for="orderLookupInput">Order Reference Number</label>
+            <div class="lookup-row">
+              <input
+                type="text"
+                id="orderLookupInput"
+                name="orderRef"
+                placeholder="e.g., SAV-261128-8K4M or SAV-DEMO-8421"
+                autocomplete="off"
+              >
+              <button type="submit" class="btn btn-primary" id="lookupOrderBtn">Track Order</button>
+            </div>
+            <p class="lookup-feedback" id="lookupFeedback" aria-live="polite"></p>
+          </form>
+
+          <div class="quick-orders-wrap">
+            <p class="quick-orders-label">Recent &amp; Sample Orders</p>
+            <div class="quick-orders-list" id="quickOrdersList" role="group" aria-label="Quick select order"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tracking-workspace" id="trackingWorkspace" aria-label="Active Order Status and Summary">
+      <div class="container">
+        <!-- Empty / Not Found Panel -->
+        <article class="luxury-card empty-lookup-card" id="noOrderSelectedPanel" hidden>
+          <p class="eyebrow">No Active Reference</p>
+          <h2>Locate Your SavorSpot Order</h2>
+          <p class="empty-copy">
+            Enter your <strong>SAV-</strong> confirmation reference above, choose one of the recent orders, or place a new order at checkout.
+          </p>
+          <div class="empty-actions">
+            <a class="btn btn-primary" href="checkout.html">Go to Checkout</a>
+            <a class="btn btn-outline" href="menu.html">Browse Menu</a>
+          </div>
+        </article>
+
+        <!-- Active Tracked Order Grid -->
+        <div class="tracking-grid" id="trackedOrderContent">
+          <div class="tracking-main-column">
+            <!-- Status Banner & Timeline -->
+            <article class="luxury-card timeline-card" aria-labelledby="timelineHeading">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker" id="trackedOrderSource">Saved Order</p>
+                  <h2 class="card-title" id="timelineHeading">
+                    Order <span id="trackedOrderRef">SAV-DEMO-8421</span>
+                  </h2>
+                  <p class="order-placed-time" id="trackedOrderTimestamp">—</p>
+                </div>
+
+                <div class="status-meta-stack">
+                  <span class="status-pill" id="trackedStatusBadge">Culinary Prep</span>
+                  <span class="eta-text" id="trackedEtaText">Est. 25–30 mins remaining</span>
+                </div>
+              </header>
+
+              <div class="progress-bar-track" aria-hidden="true">
+                <div class="progress-bar-fill" id="timelineProgressBar"></div>
+              </div>
+
+              <ol class="status-timeline" id="statusTimeline" aria-label="Order preparation stages">
+                <li class="timeline-step" data-step="0">
+                  <div class="step-marker">01</div>
+                  <div class="step-content">
+                    <div class="step-head">
+                      <h3>Order Confirmed</h3>
+                      <span class="step-state-label"></span>
+                    </div>
+                    <p>Ticket verified and routed to the SavorSpot F-6 Markaz pass.</p>
+                  </div>
+                </li>
+
+                <li class="timeline-step" data-step="1">
+                  <div class="step-marker">02</div>
+                  <div class="step-content">
+                    <div class="step-head">
+                      <h3>Culinary Prep</h3>
+                      <span class="step-state-label"></span>
+                    </div>
+                    <p>Dishes seared over charred oak with fresh espresso reductions.</p>
+                  </div>
+                </li>
+
+                <li class="timeline-step" data-step="2">
+                  <div class="step-marker">03</div>
+                  <div class="step-content">
+                    <div class="step-head">
+                      <h3>Quality &amp; Packaging</h3>
+                      <span class="step-state-label"></span>
+                    </div>
+                    <p>Plated check by the sous-chef and sealed in thermal obsidian boxes.</p>
+                  </div>
+                </li>
+
+                <li class="timeline-step" data-step="3">
+                  <div class="step-marker">04</div>
+                  <div class="step-content">
+                    <div class="step-head">
+                      <h3 id="finalStageTitle">Out for Delivery</h3>
+                      <span class="step-state-label"></span>
+                    </div>
+                    <p id="finalStageDesc">Dispatched with our Islamabad courier to your sector.</p>
+                  </div>
+                </li>
+              </ol>
+
+              <footer class="timeline-controls">
+                <div class="sim-copy">
+                  <strong>Live Kitchen Simulation:</strong> Advance the order stage to preview real-time updates.
+                </div>
+                <div class="sim-buttons">
+                  <button type="button" class="btn btn-primary" id="advanceStatusBtn">Advance Stage</button>
+                  <button type="button" class="btn btn-ghost" id="resetStatusBtn">Reset to Step 1</button>
+                </div>
+              </footer>
+            </article>
+
+            <!-- Delivery & Guest Info -->
+            <article class="luxury-card details-card" aria-labelledby="dispatchDetailsHeading">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Dispatch &amp; Guest</p>
+                  <h2 class="card-title" id="dispatchDetailsHeading">Fulfillment Details</h2>
+                </div>
+                <span class="fulfillment-chip" id="trackedFulfillmentType">Chauffeur Delivery</span>
+              </header>
+
+              <dl class="details-grid">
+                <div class="detail-box">
+                  <dt>Guest</dt>
+                  <dd id="trackedCustomerName">—</dd>
+                </div>
+                <div class="detail-box">
+                  <dt>Contact</dt>
+                  <dd id="trackedCustomerPhone">—</dd>
+                </div>
+                <div class="detail-box detail-box-wide">
+                  <dt id="trackedAddressLabel">Islamabad Destination</dt>
+                  <dd id="trackedAddressValue">—</dd>
+                </div>
+                <div class="detail-box">
+                  <dt>Payment</dt>
+                  <dd id="trackedPaymentMethod">—</dd>
+                </div>
+                <div class="detail-box">
+                  <dt>Kitchen Notes</dt>
+                  <dd id="trackedOrderNotes">No special instructions</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+
+          <!-- Right Column: Item Summary & Support -->
+          <aside class="tracking-side-column" aria-label="Order Items and Concierge Support">
+            <article class="luxury-card summary-card">
+              <header class="card-header">
+                <div>
+                  <p class="card-kicker">Ordered Dishes</p>
+                  <h2 class="card-title">Item Summary</h2>
+                </div>
+                <span class="status-pill" id="trackedItemCount">0 items</span>
+              </header>
+
+              <ul class="tracked-items-list" id="trackedItemsList"></ul>
+
+              <dl class="totals-breakdown">
+                <div class="totals-row">
+                  <dt>Subtotal</dt>
+                  <dd id="trackedSubtotal">PKR 0</dd>
+                </div>
+                <div class="totals-row is-discount" id="trackedDiscountRow" hidden>
+                  <dt>Privilege Discount</dt>
+                  <dd id="trackedDiscount">- PKR 0</dd>
+                </div>
+                <div class="totals-row">
+                  <dt>Delivery Fee</dt>
+                  <dd id="trackedDeliveryFee">PKR 0</dd>
+                </div>
+                <div class="totals-row totals-grand">
+                  <dt>Total</dt>
+                  <dd id="trackedTotal">PKR 0</dd>
+                </div>
+              </dl>
+            </article>
+
+            <article class="luxury-card support-card" aria-labelledby="supportHeading">
+              <p class="card-kicker">Guest Concierge</p>
+              <h2 class="card-title" id="supportHeading">Need Assistance?</h2>
+              <p class="support-copy">
+                For urgent address changes, allergy notes, or courier coordination in Islamabad, reach our F-6 Markaz host desk directly.
+              </p>
+              <ul class="support-meta">
+                <li><strong>Concierge Line:</strong> <a href="tel:+92512824910">+92 51 282 4910</a></li>
+                <li><strong>Desk Email:</strong> <a href="mailto:concierge@savorspot.pk">concierge@savorspot.pk</a></li>
+                <li><strong>Kitchen:</strong> Street 7, F-6 Markaz, Super Market</li>
+              </ul>
+              <div class="support-actions">
+                <a class="btn btn-outline btn-block" href="contact.html">Contact Concierge</a>
+                <a class="btn btn-ghost btn-block" href="menu.html">Add Another Order</a>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section class="footer-brand" aria-label="SavorSpot Location and Hours">
+        <a class="brand footer-brand-link" href="../index.html">
+          <span class="brand-crest" aria-hidden="true">S</span>
+          <span class="brand-text">
+            <span class="brand-name">SavorSpot</span>
+            <span class="brand-location">Obsidian &amp; Espresso Dining</span>
+          </span>
+        </a>
+        <p class="footer-copy">
+          Wood-fired culinary craft and espresso-infused gastronomy in the heart of F-6 Markaz, Super Market, Islamabad.
+        </p>
+        <p class="footer-meta">Open Daily: 12:00 PM – 12:30 AM · +92 51 282 4910</p>
+      </section>
+
+      <nav class="footer-nav" aria-label="Dining Navigation">
+        <h2 class="footer-heading">Dining</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Chef Deals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Guest Services">
+        <h2 class="footer-heading">Guest Services</h2>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+          <li><a href="track-order.html">Track Order</a></li>
+          <li><a href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 SavorSpot Islamabad. F-6 Markaz, Super Market.</p>
+    </div>
+  </footer>
+
+  <!-- Shared #savorCart Drawer -->
+  <div class="drawer-backdrop" id="cartDrawerBackdrop" hidden></div>
+  <aside
+    id="savorCart"
+    class="cart-drawer"
+    aria-hidden="true"
+    aria-labelledby="cartDrawerTitle"
+    tabindex="-1"
+  >
+    <header class="drawer-header">
+      <div>
+        <p class="card-kicker">SavorSpot Bag</p>
+        <h2 id="cartDrawerTitle">Your Order</h2>
+      </div>
+      <button type="button" class="icon-btn" id="closeCartDrawer" aria-label="Close order bag">
+        &times;
+      </button>
+    </header>
+
+    <div class="drawer-body" id="drawerCartItems"></div>
+
+    <footer class="drawer-footer">
+      <div class="drawer-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="drawerSubtotal">PKR 0</strong>
+      </div>
+      <div class="drawer-actions">
+        <a class="btn btn-primary btn-block" href="checkout.html">Proceed to Checkout</a>
+        <a class="btn btn-ghost btn-block" href="menu.html">Browse Menu</a>
+      </div>
+    </footer>
+  </aside>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="../js/track-order.js" defer></script>
+</body>
+</html>
