@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the culinary story, ethical sourcing, wood-fired craft, and Islamabad hospitality behind SavorSpot in F-6 Markaz.">
+  <title>About &amp; Culinary Story | SavorSpot Islamabad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/about.css">
+  <script src="../js/about.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="SavorSpot Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-text">Savor<span>Spot</span></span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="deals.html" class="nav-link">Deals</a></li>
+          <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="cart-toggle"
+          id="cartToggle"
+          aria-label="Open order cart"
+          aria-controls="savorCart"
+          aria-expanded="false"
+        >
+          <svg class="icon-cart" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="cartCount" data-cart-count>0</span>
+        </button>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="siteNav"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="about-hero" aria-labelledby="aboutHeading">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">F-6 Markaz, Islamabad &middot; Culinary Story &amp; Heritage</p>
+          <h1 id="aboutHeading">Crafted in <em>Obsidian, Flame</em> &amp; Roast</h1>
+          <p class="hero-lead">
+            Born along the tree-lined lanes of F-6 Markaz, SavorSpot is a nocturnal sanctuary where small-batch
+            espresso roasting meets live oak-hearth cookery and the unhurried grace of Islamabad hospitality.
+          </p>
+          <div class="hero-actions">
+            <a href="reservations.html" class="btn-primary">Reserve a Table</a>
+            <a href="menu.html" class="btn-secondary">Explore the Menu</a>
+            <a href="#philosophySection" class="btn-ghost">Our Philosophy</a>
+          </div>
+        </div>
+
+        <aside class="hero-atelier-card" aria-label="SavorSpot house provenance overview">
+          <p class="atelier-kicker">House Provenance</p>
+          <dl class="atelier-meta-list">
+            <div class="atelier-meta-item">
+              <dt>Flagship Address</dt>
+              <dd>Plot 14, Street 7, F-6 Markaz, Islamabad</dd>
+            </div>
+            <div class="atelier-meta-item">
+              <dt>Established</dt>
+              <dd>2021 &middot; Roastery &amp; Hearth Kitchen</dd>
+            </div>
+            <div class="atelier-meta-item">
+              <dt>Signature Mediums</dt>
+              <dd>Single-Origin Espresso &amp; Margalla Oak Fire</dd>
+            </div>
+            <div class="atelier-meta-item">
+              <dt>Hospitality Footprint</dt>
+              <dd>Main Dining, Lantern Courtyard &amp; 16-Seat Salon</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="philosophy-section" id="philosophySection" aria-labelledby="philosophyHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Brand Philosophy &amp; Heritage</p>
+          <h2 id="philosophyHeading">Three Pillars of the SavorSpot Table</h2>
+          <p class="section-subtitle">
+            Every plate and pour begins long before dinner service. Select a pillar below to explore how provenance,
+            discipline, and warmth shape our kitchen and espresso bar.
+          </p>
+        </header>
+
+        <div class="philosophy-tabs" role="tablist" aria-label="Culinary Philosophy Pillars">
+          <button
+            type="button"
+            class="pillar-tab is-active"
+            id="tab-sourcing"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-sourcing"
+            data-pillar="sourcing"
+            tabindex="0"
+          >
+            <span class="tab-index" aria-hidden="true">01</span>
+            <span>Ethical Sourcing</span>
+          </button>
+
+          <button
+            type="button"
+            class="pillar-tab"
+            id="tab-craft"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-craft"
+            data-pillar="craft"
+            tabindex="-1"
+          >
+            <span class="tab-index" aria-hidden="true">02</span>
+            <span>Culinary Craft</span>
+          </button>
+
+          <button
+            type="button"
+            class="pillar-tab"
+            id="tab-hospitality"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-hospitality"
+            data-pillar="hospitality"
+            tabindex="-1"
+          >
+            <span class="tab-index" aria-hidden="true">03</span>
+            <span>Islamabad Hospitality</span>
+          </button>
+        </div>
+
+        <div class="philosophy-stage">
+          <article
+            class="pillar-panel is-active"
+            id="panel-sourcing"
+            role="tabpanel"
+            aria-labelledby="tab-sourcing"
+            tabindex="0"
+          >
+            <div class="pillar-layout">
+              <div class="pillar-copy">
+                <p class="pillar-kicker">Pillar 01 &middot; Provenance &amp; Terroir</p>
+                <h3>From Northern Orchards &amp; Highland Estates to F-6</h3>
+                <p>
+                  Great flavor is won at harvest. Our pantry pairs Potohar heirloom grains, wild mountain morels,
+                  and Swat stone fruits with grass-fed halal cuts aged in-house for deep, mineral tenderness.
+                </p>
+                <p>
+                  At the espresso bar, we cup micro-lot highland Arabica beans alongside black cardamom from Gilgit
+                  and hand-pressed citrus oils, roasting each batch weekly so every crema carries clarity and cocoa depth.
+                </p>
+                <blockquote class="editorial-quote">
+                  &ldquo;We treat regional ingredients with fine-dining reverence&mdash;letting smoke, patience, and clean
+                  acidity speak without disguise.&rdquo;
+                </blockquote>
+              </div>
+              <div class="pillar-metrics" aria-label="Sourcing standards">
+                <div class="metric-card">
+                  <span class="metric-value">72 hrs</span>
+                  <span class="metric-label">Maximum window from highland roast to espresso hopper</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">28 days</span>
+                  <span class="metric-label">Dry-aging cycle for signature ribeye and striploin cuts</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">14 Farms</span>
+                  <span class="metric-label">Direct regional growers supplying herbs, honey, and orchard fruit</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="pillar-panel"
+            id="panel-craft"
+            role="tabpanel"
+            aria-labelledby="tab-craft"
+            tabindex="0"
+            hidden
+          >
+            <div class="pillar-layout">
+              <div class="pillar-copy">
+                <p class="pillar-kicker">Pillar 02 &middot; Fire, Fermentation &amp; Extraction</p>
+                <h3>Where Wood-Fired Intensity Meets Precision</h3>
+                <p>
+                  Our open obsidian hearth burns seasoned oak and fruitwood to create a searing bed of embers while
+                  slow-simmered bone reductions and 48-hour fermented sourdough bases build quiet complexity behind the scenes.
+                </p>
+                <p>
+                  From espresso-rubbed short ribs to tableside pour-over flights calibrated to 93&deg;C, kitchen and
+                  bar operate as a single atelier&mdash;balancing bitter roast notes with caramelized savory warmth.
+                </p>
+                <blockquote class="editorial-quote">
+                  &ldquo;Temperature, time, and resting are our silent ingredients; the flame finishes what patience prepared.&rdquo;
+                </blockquote>
+              </div>
+              <div class="pillar-metrics" aria-label="Culinary craft metrics">
+                <div class="metric-card">
+                  <span class="metric-value">420&deg;C</span>
+                  <span class="metric-label">Obsidian hearth ember sear for crusted prime cuts</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">36 hrs</span>
+                  <span class="metric-label">Slow-simmered roasted marrow and black-garlic jus</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">9 bars</span>
+                  <span class="metric-label">Pressure-profiled extraction for our Velvet Obsidian Espresso</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="pillar-panel"
+            id="panel-hospitality"
+            role="tabpanel"
+            aria-labelledby="tab-hospitality"
+            tabindex="0"
+            hidden
+          >
+            <div class="pillar-layout">
+              <div class="pillar-copy">
+                <p class="pillar-kicker">Pillar 03 &middot; Modern Mehman-Nawazi</p>
+                <h3>Unhurried Evenings Shaped for Islamabad</h3>
+                <p>
+                  Hospitality in the capital carries its own rhythm: lively family tables, diplomatic dinners, and late
+                  conversations over cardamom espresso as cool air settles down from the Margalla Hills.
+                </p>
+                <p>
+                  We designed three distinct atmospheres&mdash;velvet banquettes in the Main Dining Room, lantern-lit
+                  olive trees in the Courtyard, and our acoustic 16-seat Private Salon&mdash;so every gathering unfolds without rush.
+                </p>
+                <blockquote class="editorial-quote">
+                  &ldquo;True luxury is never stiff; it is the quiet confidence of a host who anticipates your evening before you ask.&rdquo;
+                </blockquote>
+              </div>
+              <div class="pillar-metrics" aria-label="Hospitality experience highlights">
+                <div class="metric-card">
+                  <span class="metric-value">3 Zones</span>
+                  <span class="metric-label">Distinct acoustic &amp; lighting moods tailored to each occasion</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">16 Seats</span>
+                  <span class="metric-label">Walnut &amp; marble Chef&rsquo;s Private Table for bespoke tastings</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-value">12 AM</span>
+                  <span class="metric-label">Late-evening espresso bar &amp; dessert service nightly</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="heritage-grid" aria-label="Heritage pillars overview">
+          <article class="heritage-card">
+            <span class="heritage-tag">Heritage &amp; Terroir</span>
+            <h3>Rooted in Regional Harvests</h3>
+            <p>
+              Every menu cycle honors northern Pakistan&rsquo;s seasons&mdash;spring citrus blossoms, summer stone fruit,
+              and winter embers layered with warm whole spices.
+            </p>
+          </article>
+          <article class="heritage-card">
+            <span class="heritage-tag">Roastery Discipline</span>
+            <h3>Espresso as Culinary Salt</h3>
+            <p>
+              We use espresso beyond the cup&mdash;infusing glazes, cocoa-chili rubs, and tiramisu reductions with
+              freshly pulled single-origin shots.
+            </p>
+          </article>
+          <article class="heritage-card">
+            <span class="heritage-tag">F-6 Sanctuary</span>
+            <h3>Designed for Conversation</h3>
+            <p>
+              Warm brass sconces, charcoal stone, and cushioned acoustics keep the room intimate even at full evening service.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="leadership-section" id="leadershipSection" aria-labelledby="leadershipHeading">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Kitchen &amp; Leadership</p>
+          <h2 id="leadershipHeading">The Stewards Behind the Flame</h2>
+          <p class="section-subtitle">
+            SavorSpot is led by culinary artisans who bridge classical hearth technique, specialty coffee science, and gracious floor service.
+          </p>
+        </header>
+
+        <div class="leadership-grid">
+          <article class="leader-card">
+            <div class="leader-card-top">
+              <div class="leader-monogram" aria-hidden="true">TM</div>
+              <div>
+                <p class="leader-role">Executive Culinary Director</p>
+                <h3>Chef Tariq Mehmood</h3>
+              </div>
+            </div>
+            <p class="leader-bio">
+              Trained across live-fire kitchens in Istanbul and Lahore, Chef Tariq leads SavorSpot&rsquo;s dry-aging program
+              and hearth menu, pairing smoky reductions with subtle Potohar aromatics.
+            </p>
+            <dl class="leader-facts">
+              <div>
+                <dt>Focus</dt>
+                <dd>Wood-Fired Mains &amp; Tasting Menus</dd>
+              </div>
+              <div>
+                <dt>Signature</dt>
+                <dd>Charred Black-Garlic Ribeye &amp; Marrow Jus</dd>
+              </div>
+            </dl>
+            <button
+              type="button"
+              class="btn-note-toggle"
+              aria-expanded="false"
+              aria-controls="leaderNote-tariq"
+              data-leader-toggle="leaderNote-tariq"
+            >
+              Read Chef&rsquo;s Note
+            </button>
+            <div class="leader-note" id="leaderNote-tariq" hidden>
+              <p>
+                &ldquo;Resting a steak over warm olive wood after a blisteringly hot sear lets the butter, espresso salt,
+                and marrow jus marry cleanly without overpowering the meat.&rdquo;
+              </p>
+            </div>
+          </article>
+
+          <article class="leader-card leader-card--featured">
+            <div class="leader-card-top">
+              <div class="leader-monogram" aria-hidden="true">SQ</div>
+              <div>
+                <p class="leader-role">Head Roaster &amp; Beverage Architect</p>
+                <h3>Sanaullah Qureshi</h3>
+              </div>
+            </div>
+            <p class="leader-bio">
+              A certified sensory cupper and botanical mixologist, Sanaullah calibrates our Obsidian Espresso house blend
+              and crafts zero-proof smoked tonics tailored to each course.
+            </p>
+            <dl class="leader-facts">
+              <div>
+                <dt>Focus</dt>
+                <dd>Micro-Lot Roasting &amp; Botanical Pairings</dd>
+              </div>
+              <div>
+                <dt>Signature</dt>
+                <dd>Cardamom Obsidian Cortado &amp; Burnt Citrus Tonic</dd>
+              </div>
+            </dl>
+            <button
+              type="button"
+              class="btn-note-toggle"
+              aria-expanded="false"
+              aria-controls="leaderNote-sanaullah"
+              data-leader-toggle="leaderNote-sanaullah"
+            >
+              Read Roaster&rsquo;s Note
+            </button>
+            <div class="leader-note" id="leaderNote-sanaullah" hidden>
+              <p>
+                &ldquo;We roast for velvet body rather than harsh char&mdash;so dark chocolate and toasted hazelnut notes
+                anchor both your morning pour-over and your late-night affogato.&rdquo;
+              </p>
+            </div>
+          </article>
+
+          <article class="leader-card">
+            <div class="leader-card-top">
+              <div class="leader-monogram" aria-hidden="true">ZA</div>
+              <div>
+                <p class="leader-role">Ma&icirc;tre d&rsquo; &amp; Private Salon Host</p>
+                <h3>Zainab Alvi</h3>
+              </div>
+            </div>
+            <p class="leader-bio">
+              Overseeing floor choreography and bespoke events at F-6 Markaz, Zainab curates seasonal floral tablescapes,
+              calligraphy tasting menus, and seamless private dining pacing.
+            </p>
+            <dl class="leader-facts">
+              <div>
+                <dt>Focus</dt>
+                <dd>Guest Pacing &amp; Chef&rsquo;s Private Table</dd>
+              </div>
+              <div>
+                <dt>Signature</dt>
+                <dd>5-Course Diplomatic &amp; Anniversary Evenings</dd>
+              </div>
+            </dl>
+            <button
+              type="button"
+              class="btn-note-toggle"
+              aria-expanded="false"
+              aria-controls="leaderNote-zainab"
+              data-leader-toggle="leaderNote-zainab"
+            >
+              Read Host&rsquo;s Note
+            </button>
+            <div class="leader-note" id="leaderNote-zainab" hidden>
+              <p>
+                &ldquo;Whether it is a quiet corner booth for two or sixteen guests around the walnut salon table,
+                our goal is that you notice the conversation, never the logistics.&rdquo;
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="milestones-section" id="milestonesSection" aria-labelledby="milestonesHeading">
+      <div class="container">
+        <div class="milestones-header-row">
+          <header class="section-header">
+            <p class="eyebrow">Tasting Milestones</p>
+            <h2 id="milestonesHeading">From Micro-Roastery to F-6 Flagship</h2>
+            <p class="section-subtitle">
+              Filter by craft discipline or select any chapter to inspect the tasting notes that defined SavorSpot&rsquo;s evolution.
+            </p>
+          </header>
+
+          <div class="milestone-filters" role="group" aria-label="Filter milestones by discipline">
+            <button type="button" class="filter-chip is-active" data-milestone-filter="all" aria-pressed="true">All Chapters</button>
+            <button type="button" class="filter-chip" data-milestone-filter="roastery" aria-pressed="false">Roastery</button>
+            <button type="button" class="filter-chip" data-milestone-filter="culinary" aria-pressed="false">Culinary</button>
+            <button type="button" class="filter-chip" data-milestone-filter="hospitality" aria-pressed="false">Hospitality</button>
+          </div>
+        </div>
+
+        <div class="milestones-layout">
+          <div class="milestones-list" id="milestonesList">
+            <article class="milestone-item is-selected" data-category="roastery" data-milestone-id="2021">
+              <button type="button" class="milestone-trigger" data-milestone-select="2021" aria-pressed="true">
+                <span class="milestone-year">2021</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Roastery</span>
+                  <strong>Chapter I &middot; The Street 7 Espresso Bar</strong>
+                  <span class="milestone-summary">Launched as a 12-seat specialty coffee counter with our first Obsidian dark-velvet roast.</span>
+                </span>
+              </button>
+            </article>
+
+            <article class="milestone-item" data-category="culinary" data-milestone-id="2022">
+              <button type="button" class="milestone-trigger" data-milestone-select="2022" aria-pressed="false">
+                <span class="milestone-year">2022</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Culinary</span>
+                  <strong>Chapter II &middot; Lighting the Obsidian Hearth</strong>
+                  <span class="milestone-summary">Commissioned our oak-and-charcoal hearth and launched 48-hour sourdough flatbreads.</span>
+                </span>
+              </button>
+            </article>
+
+            <article class="milestone-item" data-category="hospitality" data-milestone-id="2023">
+              <button type="button" class="milestone-trigger" data-milestone-select="2023" aria-pressed="false">
+                <span class="milestone-year">2023</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Hospitality</span>
+                  <strong>Chapter III &middot; Opening the Lantern Courtyard</strong>
+                  <span class="milestone-summary">Transformed our F-6 garden into an open-air olive terrace with fire tables and twilight service.</span>
+                </span>
+              </button>
+            </article>
+
+            <article class="milestone-item" data-category="culinary" data-milestone-id="2024">
+              <button type="button" class="milestone-trigger" data-milestone-select="2024" aria-pressed="false">
+                <span class="milestone-year">2024</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Culinary</span>
+                  <strong>Chapter IV &middot; Dry-Aging &amp; Seasonal Flights</strong>
+                  <span class="milestone-summary">Introduced 28-day dry-aged prime cuts and quarterly five-course northern harvest tastings.</span>
+                </span>
+              </button>
+            </article>
+
+            <article class="milestone-item" data-category="hospitality" data-milestone-id="2025">
+              <button type="button" class="milestone-trigger" data-milestone-select="2025" aria-pressed="false">
+                <span class="milestone-year">2025</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Hospitality</span>
+                  <strong>Chapter V &middot; The Chef&rsquo;s Private Salon</strong>
+                  <span class="milestone-summary">Unveiled our sound-insulated 16-seat walnut salon for milestone dinners and tasting pairings.</span>
+                </span>
+              </button>
+            </article>
+
+            <article class="milestone-item" data-category="roastery" data-milestone-id="2026">
+              <button type="button" class="milestone-trigger" data-milestone-select="2026" aria-pressed="false">
+                <span class="milestone-year">2026</span>
+                <span class="milestone-body">
+                  <span class="milestone-tag">Roastery</span>
+                  <strong>Chapter VI &middot; Reserve Pour-Over Atelier</strong>
+                  <span class="milestone-summary">Expanded into tableside numbered single-estate flights and smoked espresso dessert pairings.</span>
+                </span>
+              </button>
+            </article>
+          </div>
+
+          <aside class="milestone-spotlight" id="milestoneSpotlight" aria-live="polite" aria-label="Selected tasting milestone details">
+            <div class="spotlight-top">
+              <span class="spotlight-badge" id="spotlightYear">2021 &middot; Chapter I</span>
+              <span class="spotlight-category" id="spotlightCategory">Roastery</span>
+            </div>
+            <h3 id="spotlightTitle">The Street 7 Espresso Bar</h3>
+            <p class="spotlight-narrative" id="spotlightNarrative">
+              SavorSpot began as an intimate twelve-seat espresso counter in F-6 Markaz dedicated to proving dark-roasted coffee could be syrupy, aromatic, and naturally sweet without bitterness.
+            </p>
+            <dl class="spotlight-details">
+              <div class="spotlight-row">
+                <dt>Defining Creation</dt>
+                <dd id="spotlightCreation">Obsidian Velvet Double Ristretto</dd>
+              </div>
+              <div class="spotlight-row">
+                <dt>Tasting Notes</dt>
+                <dd id="spotlightNotes">Roasted cacao nib, toasted hazelnut, dark caramel</dd>
+              </div>
+              <div class="spotlight-row">
+                <dt>Recommended Pairing</dt>
+                <dd id="spotlightPairing">Warm Espresso Brioche &amp; Smoked Sea-Salt Butter</dd>
+              </div>
+            </dl>
+            <div class="spotlight-actions">
+              <a href="menu.html" class="btn-primary">Taste on the Menu</a>
+              <a href="reservations.html" class="btn-ghost">Book an Evening Table</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-cta" aria-labelledby="aboutCtaHeading">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-copy">
+            <p class="eyebrow">Experience SavorSpot Tonight</p>
+            <h2 id="aboutCtaHeading">Take Your Seat at Plot 14, Street 7</h2>
+            <p>
+              Join us in the Main Dining Room, unwind under the Courtyard lanterns, or reserve the Chef&rsquo;s Private Table
+              for a custom five-course evening in the heart of F-6 Markaz.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="reservations.html" class="btn-primary">Book a Reservation</a>
+            <a href="menu.html" class="btn-secondary">Explore Full Menu</a>
+            <a href="deals.html" class="btn-ghost">View Dining Deals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="brand-logo">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-text">Savor<span>Spot</span></span>
+        </a>
+        <p class="footer-tagline">
+          Obsidian-crafted dining, slow-roasted espresso artistry, and curated private salons in the heart of F-6 Markaz, Islamabad.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-info">
+        <h4>Visit Us</h4>
+        <p>Plot 14, Street 7, F-6 Markaz (Super Market), Islamabad</p>
+        <p>Daily: 12:30 PM &ndash; 12:00 AM</p>
+        <p>+92 51 282 4419 &middot; concierge@savorspot.pk</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="footerYear">2026</span> SavorSpot Islamabad. All rights reserved.</p>
+      <p>Obsidian &amp; Espresso Culinary House</p>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+
+  <aside
+    id="savorCart"
+    class="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="savorCartTitle"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <header class="cart-drawer-header">
+      <div>
+        <p class="eyebrow">Pre-Order &amp; Takeaway</p>
+        <h2 id="savorCartTitle">Your SavorSpot Cart</h2>
+      </div>
+      <button type="button" class="drawer-close" id="closeCartBtn" aria-label="Close cart drawer">&times;</button>
+    </header>
+
+    <div class="cart-drawer-body" id="cartItemsContainer"></div>
+
+    <footer class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rs. 0</strong>
+      </div>
+      <p class="cart-note">Items added from our Menu or Deals stay synced across all pages.</p>
+      <div class="cart-footer-actions">
+        <button type="button" class="btn-ghost" id="clearCartBtn">Clear Cart</button>
+        <a href="menu.html" class="btn-primary">Browse Menu</a>
+      </div>
+    </footer>
+  </aside>
+
+  <div id="savorToast" class="savor-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
